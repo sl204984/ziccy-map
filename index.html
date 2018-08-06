@@ -1,200 +1,299 @@
 <!DOCTYPE html>
 <HTML>
-	<HEAD>
-		<META CHARSET="UTF-8" />
-		<META NAME="viewport" CONTENT="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge"> 
-		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
-		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
-		<META HTTP-EQUIV="Expires" CONTENT="0"> 
-		<META NAME="description" CONTENT="tigerknows web map">
-		<META NAME="author" CONTENT="Cosim">
-		<TITLE>图云空间©Web地图</TITLE>
-		<LINK rel="shortcut icon" type="image/x-icon" href="img/tkm_logo.ico">
-		
-		<LINK rel="stylesheet" type="text/css" href="admin.css" />
-		<SCRIPT type="text/javascript" src="vendor/jquery.min.js"></SCRIPT>
-		<SCRIPT type="text/javascript" src="gl-matrix.js"></SCRIPT>
-		
-		
-		<!-- modules for dev -->
-		<SCRIPT type="text/javascript" src="src/tkujs.js"></SCRIPT>
-		<SCRIPT type="text/javascript" src="src/daemon.js"></SCRIPT>
-		<SCRIPT type="text/javascript" src="src/chirisugaku.js"></SCRIPT>
-		<SCRIPT type="text/javascript" src="src/layer.js"></SCRIPT>
-		<SCRIPT type="text/javascript" src="src/canvas.js"></SCRIPT>
-		<SCRIPT type="text/javascript" src="src/util.js"></SCRIPT>
-		<SCRIPT type="text/javascript" src="src/shiori.js"></SCRIPT>
-		
-		<SCRIPT type="text/javascript" src="src/tssh.js"></SCRIPT>
-		<SCRIPT type="text/javascript" src="src/anime.js"></SCRIPT>
-		<SCRIPT type="text/javascript" src="src/styler.js"></SCRIPT>
-		<SCRIPT type="text/javascript" src="src/chizu.js"></SCRIPT>		
-		<SCRIPT type="text/javascript" src="src/gl.js"></SCRIPT>
-		<SCRIPT type="text/javascript" src="src/mapapi.js"></SCRIPT>
-		<SCRIPT type="text/javascript" src="src/egaki.js"></SCRIPT> 
-		<SCRIPT type="text/javascript" src="src/fukaku.js"></SCRIPT>
-		<SCRIPT type="text/javascript" src="src/clusterer.js"></SCRIPT> 
-		<!-- -->
 
-		<!-- min module - ->
+<HEAD>
+	<META CHARSET="UTF-8" />
+	<META NAME="viewport" CONTENT="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge">
+	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+	<META HTTP-EQUIV="Expires" CONTENT="0">
+	<META NAME="description" CONTENT="tigerknows web map">
+	<META NAME="author" CONTENT="Cosim">
+	<TITLE>图云空间©Web地图</TITLE>
+	<LINK rel="shortcut icon" type="image/x-icon" href="img/tkm_logo.ico">
+
+	<LINK rel="stylesheet" type="text/css" href="admin.css" />
+	<SCRIPT type="text/javascript" src="vendor/jquery.min.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="gl-matrix.js"></SCRIPT>
+
+
+	<!-- modules for dev -->
+	<SCRIPT type="text/javascript" src="src/tkujs.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="src/daemon.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="src/chirisugaku.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="src/layer.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="src/canvas.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="src/util.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="src/shiori.js"></SCRIPT>
+
+	<SCRIPT type="text/javascript" src="src/tssh.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="src/anime.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="src/styler.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="src/chizu.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="src/gl.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="src/mapapi.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="src/egaki.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="src/fukaku.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="src/clusterer.js"></SCRIPT>
+	<!-- -->
+
+	<!-- min module - ->
 		<SCRIPT type="text/javascript" src="minified/tmap.min.js"></SCRIPT>
 		<!- - end min module -->
-		
-		<!-- map.css - ->
+
+	<!-- map.css - ->
 		<LINK rel="stylesheet" type="text/css" href="src/tkmap.css" />
 		<!- - end map css-->
 
-		<!-- min css -->
-		<LINK rel="stylesheet" type="text/css" href="tmap.min.css" />
-		<!-- end min css -->
+	<!-- min css -->
+	<LINK rel="stylesheet" type="text/css" href="tmap.min.css" />
+	<!-- end min css -->
 
-		<!-- <script type="text/javascript" src="data.js"></script>  -->
-		<LINK rel="stylesheet" type="text/css" href="./vendor/color-picker/color-picker.css" />
+	<!-- <script type="text/javascript" src="data.js"></script>  -->
+	<LINK rel="stylesheet" type="text/css" href="./vendor/color-picker/color-picker.css" />
 
-		<script src="./vendor/color-picker/color-picker.js"></script> 
-		<script src="./zj-admin.js"></script> 
-		
+	<script src="./vendor/color-picker/color-picker.js"></script>
+	<script src="./zj-admin.js"></script>
 
-		<link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="./vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-		<link href="./vendor/sb-admin/css/sb-admin-2.css" rel="stylesheet">
-		<link href="./vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	</HEAD>
-	<BODY>
-		<div id="debug" class="tkm-debug-info"></div>
-		
-		<div id="colorpicker" style="position: absolute; z-index: 15000; display: none; border-radius: 5px; border: 1px solid #666; background-color: white; width: 565px; height:335px;"></div>
 
-		<div style="position: absolute; z-index: 15000; right:10px; top:10px; background-color: white; box-shadow: 2px 2px 2px rgba(0,0,0,.4);">
-			<ul class="nav navbar-top-links navbar-right">
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">视图<i class="fa fa-caret-down"></i></a>
-					<ul class="dropdown-menu dropdown-view">
-						<li><a href="javascript:viewStyleCheck('vector-sm')"><i class="fa fa-check-square-o fa-fw"></i> 天地图视图</a></li>
-						<li><a href="javascript:viewStyleCheck('vector')"><i class="fa fa-square-o fa-fw"></i> 标准视图</a></li>
-						<li><a href="javascript:viewStyleCheck('vector-eu')"><i class="fa fa-square-o fa-fw"></i> 欧标视图</a></li>
-						<li><a href="javascript:viewStyleCheck('vector-night')"><i class="fa fa-square-o fa-fw"></i> 夜间视图</a></li>
-						<li><a href="javascript:viewStyleCheck('satellite')"><i class="fa fa-square-o fa-fw"></i> 卫星视图</a></li>
-					</ul>
-					<!-- /.dropdown-messages -->
-				</li>
+	<link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="./vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+	<link href="./vendor/sb-admin/css/sb-admin-2.css" rel="stylesheet">
+	<link href="./vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</HEAD>
 
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">配色<i class="fa fa-caret-down"></i></a>
-					<ul class="dropdown-menu dropdown-edit">
-						<li><a href="javascript:showcolorpick(3)"><i class="fa fa-edit fa-fw"></i> 交通</a></li>						
-						<li><a href="javascript:showcolorpick(4)"><i class="fa fa-edit fa-fw"></i> 绿地</a></li>						
-						<li><a href="javascript:showcolorpick(5)"><i class="fa fa-edit fa-fw"></i> 水系</a></li>
-						<li><a href="javascript:showcolorpick(6)"><i class="fa fa-edit fa-fw"></i> 居民地</a></li>
-						<li><a href="javascript:showcolorpick(7)"><i class="fa fa-edit fa-fw"></i> 境界线</a></li>	
-						<li class="divider">-</li>
-						<li><a href="javascript:clearColorStyle()"><i class="fa fa-trash-o fa-fw"></i> 恢复</a></li>
-					</ul>
-					<!-- /.dropdown-messages -->
-				</li>
-				
-				<li>
-					<a href="javascript:toggleThemeLayer('c')"> 路况</a>
-					<!--<a href="javascript:test()"> 路况</a>-->
-				</li>
-				
-				<!-- /.dropdown -->
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">测量 <i class="fa fa-caret-down"></i></a>
-					<ul class="dropdown-menu dropdown-user">
-						<li><a href="javascript:_map.view.toggleQueryMode()"><i class="fa fa-question fa-fw"></i> 查询</a></li>
-						<li><a href="javascript:_map.view.toggleMeasureMode(1)"><i class="fa fa-magic fa-fw"></i> 测距</a></li>
-						<li><a href="javascript:_map.view.toggleMeasureMode(2)"><i class="fa fa-crop fa-fw"></i> 测面</a></li>
-						<li><a href="javascript:_map.view.togglePickPin()"><i class="fa fa-map-marker fa-fw"></i> 标点</a></li>
-						
-						<li class="divider">-</li>
-						<li><a href="javascript:drawFree()"><i class="fa fa-pencil fa-fw"></i> 绘制</a></li>
-						<li><a href="javascript:drawShape('rectangle')"><i class="fa fa-square-o fa-fw"></i> 矩形</a></li>	
-						<li><a href="javascript:drawShape('circle')"><i class="fa  fa-circle-thin fa-fw"></i> 圆形</a></li>	
+<BODY>
+	<div id="debug" class="tkm-debug-info"></div>
 
-						<li class="divider">-</li>
-						<li><a href="javascript:clearDraw()"><i class="fa fa-trash-o fa-fw"></i> 清空</a></li>	
-							
-						<!--   
+	<div id="colorpicker" style="position: absolute; z-index: 15000; display: none; border-radius: 5px; border: 1px solid #666; background-color: white; width: 565px; height:335px;"></div>
+
+	<div style="position: absolute; z-index: 15000; right:10px; top:10px; background-color: white; box-shadow: 2px 2px 2px rgba(0,0,0,.4);">
+		<ul class="nav navbar-top-links navbar-right">
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">视图
+					<i class="fa fa-caret-down"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-view">
+					<li>
+						<a href="javascript:viewStyleCheck('vector-sm')">
+							<i class="fa fa-check-square-o fa-fw"></i> 天地图视图</a>
+					</li>
+					<li>
+						<a href="javascript:viewStyleCheck('vector')">
+							<i class="fa fa-square-o fa-fw"></i> 标准视图</a>
+					</li>
+					<li>
+						<a href="javascript:viewStyleCheck('vector-eu')">
+							<i class="fa fa-square-o fa-fw"></i> 欧标视图</a>
+					</li>
+					<li>
+						<a href="javascript:viewStyleCheck('vector-night')">
+							<i class="fa fa-square-o fa-fw"></i> 夜间视图</a>
+					</li>
+					<li>
+						<a href="javascript:viewStyleCheck('satellite')">
+							<i class="fa fa-square-o fa-fw"></i> 卫星视图</a>
+					</li>
+				</ul>
+				<!-- /.dropdown-messages -->
+			</li>
+
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">配色
+					<i class="fa fa-caret-down"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-edit">
+					<li>
+						<a href="javascript:showcolorpick(3)">
+							<i class="fa fa-edit fa-fw"></i> 交通</a>
+					</li>
+					<li>
+						<a href="javascript:showcolorpick(4)">
+							<i class="fa fa-edit fa-fw"></i> 绿地</a>
+					</li>
+					<li>
+						<a href="javascript:showcolorpick(5)">
+							<i class="fa fa-edit fa-fw"></i> 水系</a>
+					</li>
+					<li>
+						<a href="javascript:showcolorpick(6)">
+							<i class="fa fa-edit fa-fw"></i> 居民地</a>
+					</li>
+					<li>
+						<a href="javascript:showcolorpick(7)">
+							<i class="fa fa-edit fa-fw"></i> 境界线</a>
+					</li>
+					<li class="divider">-</li>
+					<li>
+						<a href="javascript:clearColorStyle()">
+							<i class="fa fa-trash-o fa-fw"></i> 恢复</a>
+					</li>
+				</ul>
+				<!-- /.dropdown-messages -->
+			</li>
+
+			<li>
+				<a href="javascript:toggleThemeLayer('c')"> 路况</a>
+				<!--<a href="javascript:test()"> 路况</a>-->
+			</li>
+
+			<!-- /.dropdown -->
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">测量
+					<i class="fa fa-caret-down"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-user">
+					<li>
+						<a href="javascript:_map.view.toggleQueryMode()">
+							<i class="fa fa-question fa-fw"></i> 查询</a>
+					</li>
+					<li>
+						<a href="javascript:_map.view.toggleMeasureMode(1)">
+							<i class="fa fa-magic fa-fw"></i> 测距</a>
+					</li>
+					<li>
+						<a href="javascript:_map.view.toggleMeasureMode(2)">
+							<i class="fa fa-crop fa-fw"></i> 测面</a>
+					</li>
+					<li>
+						<a href="javascript:_map.view.togglePickPin()">
+							<i class="fa fa-map-marker fa-fw"></i> 标点</a>
+					</li>
+
+					<li class="divider">-</li>
+					<li>
+						<a href="javascript:drawFree()">
+							<i class="fa fa-pencil fa-fw"></i> 绘制</a>
+					</li>
+					<li>
+						<a href="javascript:drawShape('rectangle')">
+							<i class="fa fa-square-o fa-fw"></i> 矩形</a>
+					</li>
+					<li>
+						<a href="javascript:drawShape('circle')">
+							<i class="fa  fa-circle-thin fa-fw"></i> 圆形</a>
+					</li>
+
+					<li class="divider">-</li>
+					<li>
+						<a href="javascript:clearDraw()">
+							<i class="fa fa-trash-o fa-fw"></i> 清空</a>
+					</li>
+
+					<!--   
 						<li class="divider"></li>
 						<li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
 						</li> -->
-					</ul>
-					<!-- /.dropdown-alerts -->
-				</li>
-				<!-- /.dropdown -->
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">筛选 <i class="fa fa-caret-down"></i></a>
-					<ul class="dropdown-menu dropdown-tasks nav">
-						<li>
-							<a href="javascript:void(0)"><i class="fa fa-wrench fa-fw"></i> POI<span class="tk accessory">
+				</ul>
+				<!-- /.dropdown-alerts -->
+			</li>
+			<!-- /.dropdown -->
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">筛选
+					<i class="fa fa-caret-down"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-tasks nav">
+					<li>
+						<a href="javascript:void(0)">
+							<i class="fa fa-wrench fa-fw"></i> POI
+							<span class="tk accessory">
 								<img src="img/out/eye.png" style="margin:0px;width:24px;height:24px;" onclick="toggleFeatureVisibilty(this,1)">
-							</span></a>
-						</li>
+							</span>
+						</a>
+					</li>
 
-						<li>
-							<a href="javascript:void(0)"><i class="fa fa-wrench fa-fw"></i> 地名<span class="tk accessory">
+					<li>
+						<a href="javascript:void(0)">
+							<i class="fa fa-wrench fa-fw"></i> 地名
+							<span class="tk accessory">
 								<img src="img/out/eye.png" style="margin:0px;width:24px;height:24px;" onclick="toggleFeatureVisibilty(this,2)">
-							</span></a>
-						</li>
+							</span>
+						</a>
+					</li>
 
-						<li>
-							<a href="javascript:void(0)"><i class="fa fa-wrench fa-fw"></i> 交通<span class="tk accessory">
+					<li>
+						<a href="javascript:void(0)">
+							<i class="fa fa-wrench fa-fw"></i> 交通
+							<span class="tk accessory">
 								<img src="img/out/sun.png" style="margin:0px;width:24px;height:24px;" onclick="toggleFeatureBold(this,3)">
 								<img src="img/out/eye.png" style="margin:0px;width:24px;height:24px;" onclick="toggleFeatureVisibilty(this,3)">
-							</span></a>
-						</li>
+							</span>
+						</a>
+					</li>
 
-						<li>
-							<a href="javascript:void(0)"><i class="fa fa-wrench fa-fw"></i> 绿地<span class="tk accessory">
+					<li>
+						<a href="javascript:void(0)">
+							<i class="fa fa-wrench fa-fw"></i> 绿地
+							<span class="tk accessory">
 								<img src="img/out/sun.png" style="margin:0px;width:24px;height:24px;" onclick="toggleFeatureBold(this,4)">
 								<img src="img/out/eye.png" style="margin:0px;width:24px;height:24px;" onclick="toggleFeatureVisibilty(this,4)">
-							</span></a>
-						</li>
+							</span>
+						</a>
+					</li>
 
-						<li>
-							<a href="javascript:void(0)"><i class="fa fa-wrench fa-fw"></i> 水系<span class="tk accessory">
+					<li>
+						<a href="javascript:void(0)">
+							<i class="fa fa-wrench fa-fw"></i> 水系
+							<span class="tk accessory">
 								<img src="img/out/sun.png" style="margin:0px;width:24px;height:24px;" onclick="toggleFeatureBold(this,5)">
 								<img src="img/out/eye.png" style="margin:0px;width:24px;height:24px;" onclick="toggleFeatureVisibilty(this,5)">
-							</span></a>
-						</li>
+							</span>
+						</a>
+					</li>
 
-						<li>
-							<a href="javascript:void(0)"><i class="fa fa-wrench fa-fw"></i> 居民地<span class="tk accessory">
+					<li>
+						<a href="javascript:void(0)">
+							<i class="fa fa-wrench fa-fw"></i> 居民地
+							<span class="tk accessory">
 								<img src="img/out/sun.png" style="margin:0px;width:24px;height:24px;" onclick="toggleFeatureBold(this,6)">
 								<img src="img/out/eye.png" style="margin:0px;width:24px;height:24px;" onclick="toggleFeatureVisibilty(this,6)">
-							</span></a>
-						</li>
+							</span>
+						</a>
+					</li>
 
-						<li>
-							<a href="javascript:void(0)"><i class="fa fa-wrench fa-fw"></i> 境界线<span class="tk accessory">
+					<li>
+						<a href="javascript:void(0)">
+							<i class="fa fa-wrench fa-fw"></i> 境界线
+							<span class="tk accessory">
 								<img src="img/out/sun.png" style="margin:0px;width:24px;height:24px;" onclick="toggleFeatureBold(this,7)">
-								<img src="img/out/eye.png" style="margin:0px;width:24px;height:24px;" onclick="toggleFeatureVisibilty(this,7)">		
-							</span></a>
-						</li>
-					</ul>
-					<!-- /.dropdown-tasks -->
-				</li>
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-						<!-- <i class="fa fa-dashboard fa-fw"></i> --> 专题<i class="fa fa-caret-down"></i>
-					</a>
-					<ul class="dropdown-menu dropdown-theme">
-						<li><a href="javascript:toggleThemeLayer(0)"><i class="fa fa-square-o fa-fw"></i> 渔港</a></li>						
-						<li><a href="javascript:toggleThemeLayer(1)"><i class="fa fa-square-o fa-fw"></i> 海岸线</a></li>						
-						<li><a href="javascript:toggleThemeLayer(2)"><i class="fa fa-square-o fa-fw"></i> 海岸功能区</a></li>
-					</ul>
-					<!-- /.dropdown-messages -->
-				</li>
-			</ul>
-		</div>
+								<img src="img/out/eye.png" style="margin:0px;width:24px;height:24px;" onclick="toggleFeatureVisibilty(this,7)">
+							</span>
+						</a>
+					</li>
+				</ul>
+				<!-- /.dropdown-tasks -->
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					<!-- <i class="fa fa-dashboard fa-fw"></i> -->专题
+					<i class="fa fa-caret-down"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-theme">
+					<li>
+						<a href="javascript:toggleThemeLayer(0)">
+							<i class="fa fa-square-o fa-fw"></i> 渔港</a>
+					</li>
+					<li>
+						<a href="javascript:toggleThemeLayer(1)">
+							<i class="fa fa-square-o fa-fw"></i> 海岸线</a>
+					</li>
+					<li>
+						<a href="javascript:toggleThemeLayer(2)">
+							<i class="fa fa-square-o fa-fw"></i> 海岸功能区</a>
+					</li>
+				</ul>
+				<!-- /.dropdown-messages -->
+			</li>
+		</ul>
+	</div>
 
 
-		<div id="map" style="position: absolute; left:130px; height: 500px; width: 500px; top:50px;"></div>
-		
-		<script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
-		<script src="./vendor/metisMenu/metisMenu.min.js"></script>
-		<script src="./vendor/sb-admin/js/sb-admin-2.js"></script> 
-	</BODY>
+	<div id="map" style="position: absolute; left:130px; height: 500px; width: 500px; top:50px;"></div>
+
+	<script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./vendor/metisMenu/metisMenu.min.js"></script>
+	<script src="./vendor/sb-admin/js/sb-admin-2.js"></script>
+</BODY>
+
 </HTML>

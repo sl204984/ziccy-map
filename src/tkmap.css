@@ -1,0 +1,408 @@
+html {
+	overflow: hidden;
+}
+body { 
+	margin: 0px; 
+	overflow: hidden; 
+}
+
+img {
+	box-sizing: content-box;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	margin-left: -186px;
+	margin-top: -691px;
+	max-width: none; 
+	width: 690px;
+	height: 786px;
+}
+
+
+/* popup bubbles related */
+tktrs {
+	position: absolute;
+	bottom: -20px;
+	*bottom: -22px;
+	left: 20px;
+	display: block;
+	height: 0;
+	width: 0;
+	font-size: 0;
+	line-height: 0;
+	border-color: #666 transparent transparent transparent;
+	border-style: solid dashed dashed dashed;
+	border-width: 10px;
+}
+
+tktri {
+	position: absolute;
+	bottom: -9px;
+	*bottom: -9px;
+	left: -10px;
+	display: block;
+	height: 0;
+	width: 0;
+	font-size: 0;
+	line-height: 0;
+	border-color: #fff transparent transparent transparent;
+	border-style: solid dashed dashed dashed;
+	border-width: 10px;
+}
+
+
+.tkm-bubble {
+	position: absolute;
+	z-index: 350;
+	border: 1px solid #666;
+	border-radius: 12px;
+	-o-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	background-color: #fff;
+	width: 400px;
+	height: 100px;
+	*top: -2px;
+	*border-top: 1px solid #666;
+	*border-top: 1px solid #666;
+	*border-left: none;
+	*border-right: none;
+	*height: 102px;
+	box-shadow: 3px 3px 4px #999;
+	-moz-box-shadow: 3px 3px 4px #999;
+	-webkit-box-shadow: 3px 3px 4px #999;
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999')";
+}
+.tkm-bubble-content {
+	margin: 8px;
+	border: none;
+}
+
+.tkm-map-pin {
+	position: absolute;
+	z-index: 20;
+	background-size: contain; 
+}
+.tkm-map-anchor {
+	position: absolute;
+	z-index: 30;
+	background-image: url(img/node.png);
+	width: 16px; 
+	height: 16px; 
+}
+
+.tkm-map-anchor-aux {
+	position: absolute;
+	z-index: 30;
+	background-image: url(img/node_1.png);
+	width: 16px; 
+	height: 16px; 
+}
+.tkm-map-mask {
+	pointer-events: none;
+	position: absolute;
+	z-index: 30;
+	background-color: rgba(255,0,0,0.25);
+}
+
+#tkm-text-ruler { 
+	display: none;
+	visibility: hidden; 
+	white-space: nowrap; 
+	/*font-size: 24px; */
+} 
+
+/* the location mark which shows where this device is now */
+.tkm-locmark { 
+	position: absolute; 
+	border: 2px solid #fff; 
+	background-color: #eeae3d;
+	width: 16px;
+	height: 16px; 
+	margin: 0 auto; 
+	-webkit-border-radius: 50px; 
+	-moz-border-radius: 50px; 
+	-o-border-radius: 50px; 
+	border-radius: 50px; 
+	box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+	z-index: 300;
+} 
+/* the container of all tkmap stuff */
+.tkm-map-mainview { 
+	margin: 0px; 
+	/*height: 100%; 
+	width: 100%; */
+	cursor: -webkit-grab;
+	/* overflow: hidden; */
+	/* background-color: #ddd; */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}  
+
+.tkm-map-mainview < div {
+	overflow: hidden;
+}
+
+.tkm-map-domtag-container {
+	position: absolute;
+	margin: 0px; 
+	left: 0px;
+	top: 0px;
+	height: 0px; 
+	width: 0px; 
+	z-index: 300;
+}
+
+.tkm-map-canvas {
+	position: absolute;
+	background-color: rgba(0,0,0,0);
+}
+
+.tkm-map-mem-canvas {
+	/*position: absolute;*/
+	width: 256px;
+	height: 256px;
+	background-color: rgba(0,0,0,0);
+	display: none;
+}
+
+
+/* style of the scale related stuff */
+.tkm-scale {
+	position: absolute; 
+	z-index: 500; 
+	pointer-events: none;
+	border-top: none; 
+	border-bottom: 5px solid #fff; 
+	border-left: 3px solid #fff; 
+	border-right: 3px solid #fff; 
+
+	height: 8px;
+	left: 5px;
+	bottom: 62px;
+}
+.tkm-scale-line {
+	pointer-events: none;
+	position: absolute; 
+	border-top: none; 
+	border-bottom: 3px solid #000; 
+	border-left: 1px solid #000; 
+	border-right: 1px solid #000; 
+	height: 6px;
+	left: -2px;
+	right: -2px;
+	bottom: -4px;
+}
+.tkm-scale-text {
+	pointer-events: none;
+	font-size: 8px;
+	margin-top: -15px;
+	color: #000 solid;
+	text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, 
+	0 -1px 0 #fff, -1px 0 0 #fff;
+}
+
+/* other staff controlling component on the map */
+/* zoom buttons */
+.tkm-button-zooms { 
+	position: absolute; 
+	z-index: 500; 
+	width: 44px; 
+	height: 100px; 
+	right: 10px; 
+	/*bottom: 10px; */
+	bottom: 64px;
+}
+.tkm-button-zoomin {
+	background-image: url(img/btn_zoomin.png); 
+	width: 44px; 
+	height: 50px; 
+}
+.tkm-button-zoomout { 
+	background-image: url(img/btn_zoomout.png); 
+	width: 44px; 
+	height: 50px; 
+}
+
+/* dynamic button */
+.tkm-button-dynamic { 
+	position: absolute; 
+	z-index: 500; 
+	width: 39px; 
+	height: 39px; 
+	right: 12px; 
+	bottom: 170px; 
+	background-image: url(img/btn_dynamic.png);
+}
+
+/* distanceruler button */
+.tkm-button-distanceruler { 
+	position: absolute; 
+	z-index: 500; 
+	width: 44px; 
+	height: 44px; 
+	right: 10px; 
+	top: 20px; 
+	background-image: url(img/btn_locate.png);
+}
+
+
+/* locating button */
+.tkm-button-locate { 
+	position: absolute; 
+	z-index: 500; 
+	width: 44px; 
+	height: 44px; 
+	right: 10px; 
+	bottom: 120px; 
+	background-image: url(img/btn_locate.png);
+	visibility: hidden;
+}
+/* the compass button */
+.tkm-button-compass {
+	position: absolute; 
+	z-index: 500; 
+	left: 10px;
+	bottom: 80px;
+	width: 44px;
+	height: 44px;
+	background-image: url(img/btn_compass.png); 
+	visibility: hidden;
+}
+/* the compass button */
+.tkm-button-tool {
+	position: absolute; 
+	z-index: 500; 
+	left: 64px;
+	bottom: 82px;
+	width: 40px;
+	height: 40px;
+	background-image: url(img/btn_tools.png); 
+}
+
+/*.tkm-marker {
+	position: absolute; 
+	z-index: 100; 
+	background-color: rgba(0,0,0,0); 
+}
+*/
+.tkm-info-window {
+
+}
+
+.tkm-bubble-title {
+	overflow: hidden;
+	width: auto;
+	height: auto; 
+	line-height: 24px; 
+	white-space: nowrap; 
+}
+/*.tkm-bubble-content {
+	width: auto; 
+	height: auto;
+}
+.tkm-bubble-maxcontent {
+	display:none;
+	position:relative
+}*/
+
+/* logo */
+.tkm-logo {
+	position: absolute; 
+	z-index: 450; 
+	left: 0px;
+	bottom: 0px;
+	width: 160px; 
+	height: 60px; 
+
+	/*background-image: url(img/tkm_logo.png);*/
+}
+.tkm-debug-info {
+	position: absolute; 
+	z-index: 1500; 
+	left: 0;
+	top: 0;
+}
+
+.tkm-pin-overlay {
+	position: absolute;
+	z-index: 15;
+	background-position: 0px 0px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.tkm-animate-control-panel {
+	position: absolute;
+	z-index: 550;
+	right: 64px;
+	bottom: 10px;
+	width: 160px;
+	height: 260px;
+	background-color: #fff;
+	border: 1px solid #666;
+	-webkit-border-radius: 4px; 
+	-moz-border-radius: 4px; 
+	-o-border-radius: 4px; 
+	border-radius: 4px; 
+	box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+}
+
+.tkm-animate-control-slider {
+	position: absolute;
+	z-index: 550;
+	width: 220px;
+	height: 30px;
+	bottom: 10px;
+	right: 230px;
+	background-color: #fff;
+	border: 1px solid #666;
+	-webkit-border-radius: 4px; 
+	-moz-border-radius: 4px; 
+	-o-border-radius: 4px; 
+	border-radius: 4px; 
+	box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+}
+
+.tkm-animate-control-button {
+	position: absolute; 
+	z-index: 10;
+	border: 2px solid #eee; 
+	background-color: #ef5;
+	top: 2px;
+	width: 22px;
+	height: 22px; 
+	margin: 0 auto; 
+	-webkit-border-radius: 50px; 
+	-moz-border-radius: 50px; 
+	-o-border-radius: 50px; 
+	border-radius: 50px; 
+}
+.tkm-animate-control-slot {
+	position: absolute; 
+	z-index: 1;
+	width: 200px;
+	height: 2px; 
+	left: 10px;
+	top: 14px;
+	background-color: #ccc;
+	border-top: none; 
+	border-bottom: 1px solid #000; 
+	border-left: none; 
+	border-right: 1px solid #000; 
+}
+.tkm-animate-control-slotmark {
+	position: absolute; 
+	width: 3px;
+	z-index: 2;
+	height: 4px; 
+	left: 10px;
+	bottom: 14px;
+	border-top: none; 
+	border-bottom: none; 
+	border-left: 1px solid #000; 
+	border-right: none; 
+}

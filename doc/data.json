@@ -1,0 +1,4158 @@
+{
+    "project": {
+        "name": "TMap SDK",
+        "description": "<h1>TMap.js</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;TMap.js是图云空间©开发的一套Web端矢量地图开发的SDK。它迎合的市面上主流的GIS应用需求，是对自有地图数据、强GIS应用场景下定制开发模式的有效支持。</p><h2>应用示例</h2><p><a href=\"../Endoscopy-Map.html\">小窗地图示例</a></p><p><a href=\"../Marker-Map.html\">图形标注示例</a></p><p><a href=\"../Twins-Map.html\">双视图示例</a></p><p><a href=\"../Shape-Map.html\">图形覆盖物示例</a></p><p><a href=\"../Layers-Map.html\">多图层示例</a></p>",
+        "version": "1.0.0",
+        "logo": "http://120.55.46.163/webmap/img/tkm_logo.png",
+        "navs": [
+            {
+                "name": "首页",
+                "url": "http://120.55.46.163/webmap"
+            },
+            {
+                "name": "文档",
+                "url": "http://120.55.46.163/SDK-site/doc"
+            },
+            {
+                "name": "示例",
+                "url": "http://120.55.46.163/SDK-site/doc"
+            },
+            {
+                "name": "下载",
+                "url": "http://120.55.46.163/SDK-site/downloads/web-sdk.zip"
+            }
+        ]
+    },
+    "files": {
+        "src/anime.js": {
+            "name": "src/anime.js",
+            "modules": {},
+            "classes": {
+                "TMap.Dataset": 1,
+                "TMap.DatasetIterator": 1,
+                "TMap.DatasetEntry": 1,
+                "TMap.DrawerAgent": 1,
+                "TMap.Animater": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TMap": 1
+            }
+        },
+        "src/canvas.js": {
+            "name": "src/canvas.js",
+            "modules": {},
+            "classes": {
+                "TMap.Canvas.MapCanvas": 1,
+                "TMap.Canvas.MapCanvasBasic": 1,
+                "TMap.Canvas.MapCanvasOverlay": 1,
+                "TMap.Canvas.MapCanvasLabel": 1,
+                "TMap.Canvas.MapCanvasDynamic": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TMap.Canvas": 1
+            }
+        },
+        "src/chirisugaku.js": {
+            "name": "src/chirisugaku.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {
+                "GeoUtils": 1,
+                "TMap": 1,
+                "TMap.GeoUtils": 1
+            }
+        },
+        "src/chizu.js": {
+            "name": "src/chizu.js",
+            "modules": {},
+            "classes": {
+                "TMap.MapOptions": 1,
+                "TMap.Map": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TMap": 1
+            }
+        },
+        "src/clusterer.js": {
+            "name": "src/clusterer.js",
+            "modules": {},
+            "classes": {
+                "TMap.MarkerClusterer": 1,
+                "TMap.Cluster": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/fukaku.js": {
+            "name": "src/fukaku.js",
+            "modules": {},
+            "classes": {
+                "TMap.Drawer": 1,
+                "TMap.scattermap": 1,
+                "TMap.heatmap": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TMap": 1
+            }
+        },
+        "src/layer.js": {
+            "name": "src/layer.js",
+            "modules": {},
+            "classes": {
+                "TMap.Layer.LayerBase": 1,
+                "TMap.Layer.LayerVector": 1,
+                "TMap.Layer.LayerWMTS": 1,
+                "TMap.Layer.LayerWMS": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Layer": 1,
+                "TMap": 1,
+                "TMap.Layer": 1
+            }
+        },
+        "src/mapapi.js": {
+            "name": "src/mapapi.js",
+            "modules": {},
+            "classes": {
+                "TMap.Point": 1,
+                "TMap.Pixel": 1,
+                "TMap.Size": 1,
+                "TMap.Bounds": 1,
+                "TMap.Overlay": 1,
+                "TMap.Shape": 1,
+                "TMap.Circle": 1,
+                "TMap.MultiPoint": 1,
+                "TMap.Polyline": 1,
+                "TMap.Polygon": 1,
+                "TMap.DOMTagOverlay": 1,
+                "TMap.Marker": 1,
+                "TMap.TextIconOverlay": 1,
+                "TMap.Bubble": 1,
+                "TMap.InfoWindow": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "TMap": 1
+            }
+        },
+        "src/shiori.js": {
+            "name": "src/shiori.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/styler.js": {
+            "name": "src/styler.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/tkujs.js": {
+            "name": "src/tkujs.js",
+            "modules": {
+                "TMap": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "TMap": {
+            "name": "TMap",
+            "submodules": {},
+            "classes": {
+                "TMap.Dataset": 1,
+                "TMap.DatasetIterator": 1,
+                "TMap.DatasetEntry": 1,
+                "TMap.DrawerAgent": 1,
+                "TMap.Animater": 1,
+                "TMap.Canvas.MapCanvas": 1,
+                "TMap.Canvas.MapCanvasBasic": 1,
+                "TMap.Canvas.MapCanvasOverlay": 1,
+                "TMap.Canvas.MapCanvasLabel": 1,
+                "TMap.Canvas.MapCanvasDynamic": 1,
+                "TMap.MapOptions": 1,
+                "TMap.Map": 1,
+                "TMap.MarkerClusterer": 1,
+                "TMap.Cluster": 1,
+                "TMap.Drawer": 1,
+                "TMap.scattermap": 1,
+                "TMap.heatmap": 1,
+                "TMap.Layer.LayerBase": 1,
+                "TMap.Layer.LayerVector": 1,
+                "TMap.Layer.LayerWMTS": 1,
+                "TMap.Layer.LayerWMS": 1,
+                "TMap.Point": 1,
+                "TMap.Pixel": 1,
+                "TMap.Size": 1,
+                "TMap.Bounds": 1,
+                "TMap.Overlay": 1,
+                "TMap.Shape": 1,
+                "TMap.Circle": 1,
+                "TMap.MultiPoint": 1,
+                "TMap.Polyline": 1,
+                "TMap.Polygon": 1,
+                "TMap.DOMTagOverlay": 1,
+                "TMap.Marker": 1,
+                "TMap.TextIconOverlay": 1,
+                "TMap.Bubble": 1,
+                "TMap.InfoWindow": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/mapapi.js",
+            "line": 1116,
+            "description": "图云地图SDK的命名根空间"
+        }
+    },
+    "classes": {
+        "TMap.Dataset": {
+            "name": "TMap.Dataset",
+            "shortname": "TMap.Dataset",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/anime.js",
+            "line": 17,
+            "description": "绘制数据集",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "data",
+                    "description": "数据",
+                    "type": "Object"
+                },
+                {
+                    "name": "func",
+                    "description": "数据处理方法",
+                    "type": "Function"
+                }
+            ]
+        },
+        "TMap.DatasetIterator": {
+            "name": "TMap.DatasetIterator",
+            "shortname": "TMap.DatasetIterator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/anime.js",
+            "line": 74,
+            "description": "数据集迭代器"
+        },
+        "TMap.DatasetEntry": {
+            "name": "TMap.DatasetEntry",
+            "shortname": "TMap.DatasetEntry",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/anime.js",
+            "line": 86,
+            "description": "数据集记录项"
+        },
+        "TMap.DrawerAgent": {
+            "name": "TMap.DrawerAgent",
+            "shortname": "TMap.DrawerAgent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/anime.js",
+            "line": 106
+        },
+        "TMap.Animater": {
+            "name": "TMap.Animater",
+            "shortname": "TMap.Animater",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/anime.js",
+            "line": 376,
+            "description": "Animater"
+        },
+        "TMap.Canvas.MapCanvas": {
+            "name": "TMap.Canvas.MapCanvas",
+            "shortname": "TMap.Canvas.MapCanvas",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap.Canvas",
+            "file": "src/canvas.js",
+            "line": 16,
+            "description": "地图画布，不要直接调用进行实例化",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "owner",
+                    "description": "地图",
+                    "type": "MapKernel"
+                }
+            ]
+        },
+        "TMap.Canvas.MapCanvasBasic": {
+            "name": "TMap.Canvas.MapCanvasBasic",
+            "shortname": "MapCanvasBasic",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap.Canvas",
+            "file": "src/canvas.js",
+            "line": 198,
+            "description": "用于绘制底图的基础画布",
+            "extends": "TMap.Canvas.MapCanvas"
+        },
+        "TMap.Canvas.MapCanvasOverlay": {
+            "name": "TMap.Canvas.MapCanvasOverlay",
+            "shortname": "MapCanvasOverlay",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap.Canvas",
+            "file": "src/canvas.js",
+            "line": 227,
+            "description": "用于绘制覆盖物的画布",
+            "extends": "TMap.Canvas.MapCanvas"
+        },
+        "TMap.Canvas.MapCanvasLabel": {
+            "name": "TMap.Canvas.MapCanvasLabel",
+            "shortname": "MapCanvasLabel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap.Canvas",
+            "file": "src/canvas.js",
+            "line": 276,
+            "description": "用于绘制底图的基础画布",
+            "extends": "TMap.Canvas.MapCanvas",
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            }
+        },
+        "TMap.Canvas.MapCanvasDynamic": {
+            "name": "TMap.Canvas.MapCanvasDynamic",
+            "shortname": "MapCanvasDynamic",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap.Canvas",
+            "file": "src/canvas.js",
+            "line": 335,
+            "description": "动态画布类，用于绘制动态更新的数据的展示载体",
+            "extends": "TMap.Canvas.MapCanvas",
+            "is_constructor": 1
+        },
+        "TMap.MapOptions": {
+            "name": "TMap.MapOptions",
+            "shortname": "TMap.MapOptions",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/chizu.js",
+            "line": 1733,
+            "description": "MapOptions 此类作为map.getViewport与map.setViewport方法的可选参数，不可实例化。"
+        },
+        "TMap.Map": {
+            "name": "TMap.Map",
+            "shortname": "TMap.Map",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/chizu.js",
+            "line": 1755,
+            "description": "TMap地图视图主类",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "- 地图选项",
+                    "type": "MapOptions"
+                }
+            ]
+        },
+        "TMap.MarkerClusterer": {
+            "name": "TMap.MarkerClusterer",
+            "shortname": "MarkerClusterer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/clusterer.js",
+            "line": 131,
+            "description": "用来解决加载大量点要素到地图上产生覆盖现象的问题，并提高性能",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "map",
+                    "description": "地图的一个实例。",
+                    "type": "Map"
+                },
+                {
+                    "name": "options",
+                    "description": "可选参数，可选项包括：<br />\n   markers {Array<Marker>} 要聚合的标记数组<br />\n   girdSize {Number} 聚合计算时网格的像素大小，默认60<br />\n   maxZoom {Number} 最大的聚合级别，大于该级别就不进行相应的聚合<br />\n   minClusterSize {Number} 最小的聚合数量，小于该数量的不能成为一个聚合，默认为2<br />\n   isAverangeCenter {Boolean} 聚合点的落脚位置是否是所有聚合在内点的平均值，默认为否，落脚在聚合内的第一个点<br />\n   styles {Array<IconStyle>}  自定义聚合后的图标风格，请参考TextIconOverlay类<br />",
+                    "type": "Json Object"
+                }
+            ],
+            "example": [
+                "\n\n     var markers = [new TMap.Marker(120, 30), new TMap.Marker(122, 29.5)];\n     new TMap.MarkerClusterer(map, {markers: markers});"
+            ]
+        },
+        "TMap.Cluster": {
+            "name": "TMap.Cluster",
+            "shortname": "Cluster",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/clusterer.js",
+            "line": 540,
+            "description": "表示一个聚合对象，该聚合，包含有N个标记，这N个标记组成的范围，并有予以显示在Map上的TextIconOverlay等。",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "markerClusterer",
+                    "description": "一个标记聚合器示例。",
+                    "type": "MarkerClusterer"
+                }
+            ]
+        },
+        "TMap.Drawer": {
+            "name": "TMap.Drawer",
+            "shortname": "TMap.Drawer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/fukaku.js",
+            "line": 45
+        },
+        "TMap.scattermap": {
+            "name": "TMap.scattermap",
+            "shortname": "scattermap",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/fukaku.js",
+            "line": 64,
+            "description": "[scattermap description]",
+            "params": [
+                {
+                    "name": "ka",
+                    "description": "[description]",
+                    "type": "TMap.DrawerAgent | TMap.Canvas"
+                },
+                {
+                    "name": "dataset",
+                    "description": "[description]",
+                    "type": "TMap.Dataset"
+                },
+                {
+                    "name": "options",
+                    "description": "[description]",
+                    "type": "Object"
+                }
+            ]
+        },
+        "TMap.heatmap": {
+            "name": "TMap.heatmap",
+            "shortname": "heatmap",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/fukaku.js",
+            "line": 98,
+            "description": "[heatmap description]",
+            "params": [
+                {
+                    "name": "ka",
+                    "description": "[description]",
+                    "type": "[type]"
+                },
+                {
+                    "name": "dataset",
+                    "description": "[description]",
+                    "type": "[type]"
+                },
+                {
+                    "name": "options",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            }
+        },
+        "TMap.Layer.LayerBase": {
+            "name": "TMap.Layer.LayerBase",
+            "shortname": "TMap.Layer.LayerBase",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap.Layer",
+            "file": "src/layer.js",
+            "line": 30,
+            "description": "LayerBase类，抽象类，不可直接实例化"
+        },
+        "TMap.Layer.LayerVector": {
+            "name": "TMap.Layer.LayerVector",
+            "shortname": "TMap.Layer.LayerVector",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap.Layer",
+            "file": "src/layer.js",
+            "line": 114,
+            "description": "LayerVector类，矢量地图数据图层。所有以矢量形式绘制展示的图层，均以此类图层，展现在地图上。",
+            "extends": "TMap.Layer.LayerBase",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                }
+            ]
+        },
+        "TMap.Layer.LayerWMTS": {
+            "name": "TMap.Layer.LayerWMTS",
+            "shortname": "TMap.Layer.LayerWMTS",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap.Layer",
+            "file": "src/layer.js",
+            "line": 393,
+            "description": "LayerWMTS类，用于实现标准WMTS的服务的地图图层。",
+            "extends": "TMap.Layer.LayerBase",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "name",
+                    "description": "用于初始化name属性",
+                    "type": "String"
+                },
+                {
+                    "name": "urlPattern",
+                    "description": "用于初始化urlPattern属性",
+                    "type": "String"
+                }
+            ]
+        },
+        "TMap.Layer.LayerWMS": {
+            "name": "TMap.Layer.LayerWMS",
+            "shortname": "TMap.Layer.LayerWMS",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap.Layer",
+            "file": "src/layer.js",
+            "line": 509,
+            "description": "LayerWMS类",
+            "extends": "TMap.Layer.LayerBase",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "name",
+                    "description": "用于初始化name属性",
+                    "type": "String"
+                },
+                {
+                    "name": "urlpattern",
+                    "description": "用于初始化urlPattern属性",
+                    "type": "String"
+                }
+            ]
+        },
+        "TMap.Point": {
+            "name": "TMap.Point",
+            "shortname": "TMap.Point",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/mapapi.js",
+            "line": 18,
+            "description": "Point类，此类表示一个地理坐标点。",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "lon",
+                    "description": "地理经度",
+                    "type": "Number"
+                },
+                {
+                    "name": "lat",
+                    "description": "地理纬度",
+                    "type": "Number"
+                }
+            ]
+        },
+        "TMap.Pixel": {
+            "name": "TMap.Pixel",
+            "shortname": "Pixel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/mapapi.js",
+            "line": 119,
+            "description": "Pixel类，此类表示地图上的一点，单位为像素。",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "x",
+                    "description": "X轴坐标",
+                    "type": "Number | Array"
+                },
+                {
+                    "name": "y",
+                    "description": "Y轴坐标",
+                    "type": "Number"
+                }
+            ]
+        },
+        "TMap.Size": {
+            "name": "TMap.Size",
+            "shortname": "Size",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/mapapi.js",
+            "line": 191,
+            "description": "Size类，此类以像素表示一个矩形区域的大小。",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "width",
+                    "description": "矩形区域有宽度",
+                    "type": "Number"
+                },
+                {
+                    "name": "height",
+                    "description": "矩形区域有高度",
+                    "type": "Number"
+                }
+            ]
+        },
+        "TMap.Bounds": {
+            "name": "TMap.Bounds",
+            "shortname": "Bounds",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/mapapi.js",
+            "line": 225,
+            "description": "Bounds类，此类表示地理坐标的矩形区域。",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "sw",
+                    "description": "西南点经纬度",
+                    "type": "TMap.Point"
+                },
+                {
+                    "name": "ne",
+                    "description": "东北点经纬度",
+                    "type": "TMap.Point"
+                }
+            ]
+        },
+        "TMap.Overlay": {
+            "name": "TMap.Overlay",
+            "shortname": "Overlay",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/mapapi.js",
+            "line": 326,
+            "description": "Overlay类，地图覆盖物类。该类不能被直接实现化使用"
+        },
+        "TMap.Shape": {
+            "name": "TMap.Shape",
+            "shortname": "Shape",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/mapapi.js",
+            "line": 388,
+            "description": "Shape类，图形覆盖物类，该类不可直接被实例化。",
+            "extends": "{TMap.Overlay}"
+        },
+        "TMap.Circle": {
+            "name": "TMap.Circle",
+            "shortname": "Circle",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/mapapi.js",
+            "line": 414,
+            "description": "Circle类，用于在地图上标注圆形覆盖物",
+            "is_constructor": 1,
+            "extends": "TMap.Shape",
+            "params": [
+                {
+                    "name": "pt",
+                    "description": "圆形覆盖物中心点经纬度",
+                    "type": "TMap.Point"
+                },
+                {
+                    "name": "r",
+                    "description": "半径长度，单位米。注意半径太大会有明显的误差",
+                    "type": "Number"
+                },
+                {
+                    "name": "opts",
+                    "description": "其他描述信息",
+                    "type": "Object"
+                }
+            ]
+        },
+        "TMap.MultiPoint": {
+            "name": "TMap.MultiPoint",
+            "shortname": "MultiPoint",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/mapapi.js",
+            "line": 512,
+            "description": "MultiPoint类，地图上的多点覆盖物。主要用于多个经纬度点的离散地图绘制。",
+            "is_constructor": 1,
+            "extends": "{TMap.Shape}",
+            "params": [
+                {
+                    "name": "array",
+                    "description": "点列的经纬度数组",
+                    "type": "Array<Point>"
+                }
+            ]
+        },
+        "TMap.Polyline": {
+            "name": "TMap.Polyline",
+            "shortname": "Polyline",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/mapapi.js",
+            "line": 583,
+            "description": "Polyline类，折线覆盖物类。用于在地图绘制直线、多段折线。",
+            "is_constructor": 1,
+            "extends": "{TMap.MultiPoint}"
+        },
+        "TMap.Polygon": {
+            "name": "TMap.Polygon",
+            "shortname": "Polygon",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/mapapi.js",
+            "line": 651,
+            "description": "Polygon类，多边形覆盖物类。主要用于地图的多边形覆盖显示。",
+            "is_constructor": 1,
+            "extends": "{TMap.MultiPoint}",
+            "example": [
+                "\n\n\t\tpolygon = new TMap.Polygon([{lon:120,lat:30}, {lon:121, lat:31}, {lon:121, lat:30}]);\n\t\tmap.addOverlay(polygon);"
+            ]
+        },
+        "TMap.DOMTagOverlay": {
+            "name": "TMap.DOMTagOverlay",
+            "shortname": "DOMTagOverlay",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/mapapi.js",
+            "line": 734,
+            "description": "DOMTagOverlay类，地图点标抽象类，不可直接实例化。",
+            "extends": "{TMap.Overlay}",
+            "params": [
+                {
+                    "name": "pt",
+                    "description": "标注位置的经纬度",
+                    "type": "TMap.Point"
+                }
+            ]
+        },
+        "TMap.Marker": {
+            "name": "TMap.Marker",
+            "shortname": "Marker",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/mapapi.js",
+            "line": 843,
+            "description": "Marker类，此类表示地图上一个标点用图像标注。",
+            "is_constructor": 1,
+            "extends": "TMap.DOMTagOverlay",
+            "params": [
+                {
+                    "name": "point",
+                    "description": "标注点的经纬度",
+                    "type": "TMap.Point"
+                }
+            ]
+        },
+        "TMap.TextIconOverlay": {
+            "name": "TMap.TextIconOverlay",
+            "shortname": "TextIconOverlay",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/mapapi.js",
+            "line": 1031,
+            "description": "TextIconOverlay类，地图点标抽象类，不可直接实例化。",
+            "extends": "{TMap.Marker}",
+            "params": [
+                {
+                    "name": "pt",
+                    "description": "标注位置的经纬度",
+                    "type": "TMap.Point"
+                },
+                {
+                    "name": "文本内容",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "pt",
+                    "description": "标注位置的经纬度",
+                    "type": "Object"
+                }
+            ]
+        },
+        "TMap.Bubble": {
+            "name": "TMap.Bubble",
+            "shortname": "Bubble",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/mapapi.js",
+            "line": 1066,
+            "description": "方便简单使用的地图标点气泡",
+            "is_constructor": 1,
+            "extends": "TMap.Marker",
+            "params": [
+                {
+                    "name": "point",
+                    "description": "标注点的经纬度",
+                    "type": "TMap.Point"
+                }
+            ]
+        },
+        "TMap.InfoWindow": {
+            "name": "TMap.InfoWindow",
+            "shortname": "InfoWindow",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "TMap",
+            "namespace": "TMap",
+            "file": "src/mapapi.js",
+            "line": 1116,
+            "description": "InfoWindow类，地图信息窗类，此类表示地图上包含信息的窗口。",
+            "is_constructor": 1,
+            "extends": "TMap.DOMTagOverlay",
+            "params": [
+                {
+                    "name": "point",
+                    "description": "标注点的经纬度",
+                    "type": "TMap.Point"
+                }
+            ]
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/anime.js",
+            "line": 27,
+            "description": "最大值",
+            "itemtype": "property",
+            "name": "maxVal",
+            "type": "Number",
+            "class": "TMap.Dataset",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/anime.js",
+            "line": 33,
+            "description": "数据帧数",
+            "itemtype": "property",
+            "name": "frameCount",
+            "type": "Number",
+            "class": "TMap.Dataset",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/anime.js",
+            "line": 64,
+            "description": "获取数据集迭代器",
+            "itemtype": "method",
+            "name": "get",
+            "return": {
+                "description": "返回当前数据集迭代器",
+                "type": "TMap.DatasetIterator"
+            },
+            "class": "TMap.Dataset",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/anime.js",
+            "line": 79,
+            "description": "获取下一个数据集记录项",
+            "itemtype": "method",
+            "name": "next",
+            "return": {
+                "description": "下一个数据集记录项，如果为结尾，则返回null",
+                "type": "TMap.DatasetEntry"
+            },
+            "class": "TMap.DatasetIterator",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/anime.js",
+            "line": 91,
+            "description": "X轴坐标值，可以是经度或是屏幕X轴坐标值",
+            "itemtype": "property",
+            "name": "x",
+            "type": "Number",
+            "class": "TMap.DatasetEntry",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/anime.js",
+            "line": 95,
+            "description": "Y轴坐标值，可以是经度或是屏幕X轴坐标值",
+            "itemtype": "property",
+            "name": "y",
+            "type": "Number",
+            "class": "TMap.DatasetEntry",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/anime.js",
+            "line": 99,
+            "description": "计数值，可以是经度或是屏幕X轴坐标值",
+            "itemtype": "property",
+            "name": "count",
+            "type": "Number",
+            "class": "TMap.DatasetEntry",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/anime.js",
+            "line": 126,
+            "description": "绘制上下文",
+            "itemtype": "property",
+            "name": "context",
+            "type": "CanvasRenderingContext2D",
+            "class": "TMap.DrawerAgent",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/anime.js",
+            "line": 143,
+            "description": "绘图上下文的宽度",
+            "itemtype": "property",
+            "name": "width",
+            "type": "Number",
+            "class": "TMap.DrawerAgent",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/anime.js",
+            "line": 149,
+            "description": "绘图上下文的高度",
+            "itemtype": "property",
+            "name": "height",
+            "type": "Number",
+            "class": "TMap.DrawerAgent",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/anime.js",
+            "line": 306,
+            "description": "dataset数据集",
+            "itemtype": "property",
+            "name": "dataset",
+            "type": "Object",
+            "class": "TMap.DrawerAgent",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/anime.js",
+            "line": 311,
+            "description": "附加选项",
+            "itemtype": "property",
+            "name": "options",
+            "type": "Object",
+            "class": "TMap.DrawerAgent",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/anime.js",
+            "line": 386,
+            "description": "Voronoi 动态图",
+            "itemtype": "method",
+            "name": "Voronoi",
+            "params": [
+                {
+                    "name": "ka",
+                    "description": "动态图描述对象",
+                    "type": "TMap.DrawerAgent"
+                }
+            ],
+            "class": "TMap.Animater",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/anime.js",
+            "line": 606,
+            "description": "散点动态图",
+            "itemtype": "method",
+            "name": "scatter",
+            "params": [
+                {
+                    "name": "ka",
+                    "description": "动态图描述对象",
+                    "type": "TMap.DrawerAgent"
+                }
+            ],
+            "class": "TMap.Animater",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/anime.js",
+            "line": 630,
+            "description": "热力动态图",
+            "itemtype": "method",
+            "name": "heatmap",
+            "params": [
+                {
+                    "name": "ka",
+                    "description": "动态图描述对象",
+                    "type": "TMap.DrawerAgent"
+                }
+            ],
+            "class": "TMap.Animater",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/canvas.js",
+            "line": 133,
+            "description": "清空画布",
+            "itemtype": "method",
+            "name": "clear",
+            "class": "TMap.Canvas.MapCanvas",
+            "namespace": "TMap.Canvas"
+        },
+        {
+            "file": "src/canvas.js",
+            "line": 142,
+            "description": "返回MapKernel对象",
+            "itemtype": "method",
+            "name": "owner",
+            "return": {
+                "description": "[description]",
+                "type": "MapKernel"
+            },
+            "class": "TMap.Canvas.MapCanvas",
+            "namespace": "TMap.Canvas"
+        },
+        {
+            "file": "src/canvas.js",
+            "line": 150,
+            "description": "获取画布是否可见",
+            "itemtype": "method",
+            "name": "visible",
+            "return": {
+                "description": "是否可见",
+                "type": "Boolean"
+            },
+            "class": "TMap.Canvas.MapCanvas",
+            "namespace": "TMap.Canvas"
+        },
+        {
+            "file": "src/canvas.js",
+            "line": 158,
+            "description": "设置画布可见性",
+            "itemtype": "method",
+            "name": "setVisible",
+            "params": [
+                {
+                    "name": "visible",
+                    "description": "是否可见",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "TMap.Canvas.MapCanvas",
+            "namespace": "TMap.Canvas"
+        },
+        {
+            "file": "src/canvas.js",
+            "line": 170,
+            "description": "隐藏画布",
+            "itemtype": "method",
+            "name": "hide",
+            "class": "TMap.Canvas.MapCanvas",
+            "namespace": "TMap.Canvas"
+        },
+        {
+            "file": "src/canvas.js",
+            "line": 178,
+            "description": "显示画布",
+            "itemtype": "method",
+            "name": "show",
+            "class": "TMap.Canvas.MapCanvas",
+            "namespace": "TMap.Canvas"
+        },
+        {
+            "file": "src/canvas.js",
+            "line": 186,
+            "description": "切换可见度",
+            "itemtype": "method",
+            "name": "toggle",
+            "class": "TMap.Canvas.MapCanvas",
+            "namespace": "TMap.Canvas"
+        },
+        {
+            "file": "src/canvas.js",
+            "line": 262,
+            "description": "清除覆盖物",
+            "itemtype": "method",
+            "name": "clearOverlay",
+            "class": "TMap.Canvas.MapCanvasOverlay",
+            "namespace": "TMap.Canvas"
+        },
+        {
+            "file": "src/canvas.js",
+            "line": 353,
+            "description": "清空当前画布",
+            "itemtype": "method",
+            "name": "clear",
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "TMap.Canvas.MapCanvasDynamic",
+            "namespace": "TMap.Canvas"
+        },
+        {
+            "file": "src/canvas.js",
+            "line": 363,
+            "description": "设置动画",
+            "itemtype": "method",
+            "name": "setAnimation",
+            "params": [
+                {
+                    "name": "func",
+                    "description": "动画对象",
+                    "type": "Function"
+                },
+                {
+                    "name": "dataset",
+                    "description": "数据集",
+                    "type": "Dataset"
+                },
+                {
+                    "name": "options",
+                    "description": "动画选项",
+                    "type": "Object"
+                }
+            ],
+            "example": [
+                "\n\n\t\t// 设置单帧的热力图\n\t\tvar canvas = _map.view.dynamicCanvas;\n\t\tvar arrayData = [];\n\t\tfor (var i = 0; i < 1000; ++i) {\n\t\t\tarrayData.push({\t\t\t\n\t\t\t\tlon: 120.15 + Math.random()* 0.2 - 0.1,\n\t\t\t\tlat: 30.27 + Math.random()* 0.20 - 0.1,\n\t\t\t\tcount: Math.random()* 10\n\t\t\t});\n\t\t}\n\t\tcanvas.setAnimation(TMap.Animater.heatmap, new TMap.Dataset(arrayData));\n\t\tcanvas.start();\n\n"
+            ],
+            "class": "TMap.Canvas.MapCanvasDynamic",
+            "namespace": "TMap.Canvas"
+        },
+        {
+            "file": "src/canvas.js",
+            "line": 392,
+            "description": "清除动画",
+            "itemtype": "method",
+            "name": "clearAnimation",
+            "params": [
+                {
+                    "name": "preserved",
+                    "description": "清除动画的同时是否清空画布",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "TMap.Canvas.MapCanvasDynamic",
+            "namespace": "TMap.Canvas"
+        },
+        {
+            "file": "src/canvas.js",
+            "line": 402,
+            "description": "添加帧绘制回调",
+            "itemtype": "method",
+            "name": "addFrameCallback",
+            "params": [
+                {
+                    "name": "func",
+                    "description": "帧回调，回调时会以帧编号传入函数",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "回调索引编号",
+                "type": "Number"
+            },
+            "class": "TMap.Canvas.MapCanvasDynamic",
+            "namespace": "TMap.Canvas"
+        },
+        {
+            "file": "src/canvas.js",
+            "line": 424,
+            "description": "移除帧回调",
+            "itemtype": "method",
+            "name": "removeFrameCallback",
+            "params": [
+                {
+                    "name": "funcId",
+                    "description": "添加帧回调时的索引",
+                    "type": "Number"
+                }
+            ],
+            "class": "TMap.Canvas.MapCanvasDynamic",
+            "namespace": "TMap.Canvas"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 16,
+            "description": "地理信息计算工具类",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 23,
+            "description": "经纬度转为墨卡托坐标",
+            "itemtype": "method",
+            "name": "ll2mct",
+            "params": [
+                {
+                    "name": "lon",
+                    "description": "[description]",
+                    "type": "Number"
+                },
+                {
+                    "name": "lat",
+                    "description": "[description]",
+                    "type": "Number"
+                },
+                {
+                    "name": "z",
+                    "description": "[description]",
+                    "type": "Number"
+                }
+            ],
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 36,
+            "description": "墨卡托坐标转为经纬度",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 44,
+            "description": "瓦片行列号转为经纬度",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 52,
+            "description": "墨卡托坐标转为WMT像素坐标",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 62,
+            "description": "WMT像素坐标转为墨卡托坐标",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 76,
+            "description": "经度（弧度）转为-pi~pi",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 83,
+            "description": "纬度（弧度）转为-pi/2~pi/2",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 90,
+            "description": "经度（角度）转为-180~180",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 97,
+            "description": "纬度（弧度）转为-90~90",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 105,
+            "description": "生成二维莫顿码",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 118,
+            "description": "生成瓦片主键",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 143,
+            "description": "将v值夹在l和r之间即：[l, r)",
+            "params": [
+                {
+                    "name": "v",
+                    "description": ""
+                }
+            ],
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 152,
+            "description": "将v值限制在T周期中即：[0, T)",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 161,
+            "description": "地球半径",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 215,
+            "description": "计算rect的bbox的r1和r2的交集",
+            "params": [
+                {
+                    "name": "r1和r2均为[l,",
+                    "description": "r, t, b]"
+                }
+            ],
+            "return": {
+                "description": "r1和r2交集bbox，形式变为[l, r, t, b]"
+            },
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 300,
+            "description": "1. 点列的时针顺序不影响结果\n2. 此多边形是只有一个边界点列的复杂多边形\n</PRE>",
+            "params": [
+                {
+                    "name": "point",
+                    "description": "测试点"
+                },
+                {
+                    "name": "polygon",
+                    "description": "多边形点列(需要形成环)"
+                }
+            ],
+            "return": {
+                "description": "点与多边形的具体关系\n<PRE>\n 1   =>  多边形边界内部\n 2   =>  多边形顶点\n</PRE>"
+            },
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 348,
+            "description": "1. 点列的时针顺序不影响结果\n2. 此多边形是只有一个边界点列的复杂多边形\n</PRE>",
+            "params": [
+                {
+                    "name": "point",
+                    "description": "测试点"
+                },
+                {
+                    "name": "polygon",
+                    "description": "多边形点列(需要形成环)"
+                }
+            ],
+            "return": {
+                "description": "点与多边形的具体关系\n<PRE>\n-1   =>  多边形外部\n 0   =>  多边形内部\n 1   =>  多边形边界内部\n 2   =>  多边形顶点\n</PRE>"
+            },
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 386,
+            "description": "PUBLIC",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chirisugaku.js",
+            "line": 406,
+            "description": "计算多边形面或点数组构建图形的面积,注意：坐标类型只能是经纬度，且不适合计算自相交多边形的面积",
+            "itemtype": "method",
+            "name": "getPolygonArea",
+            "params": [
+                {
+                    "name": "polygon",
+                    "description": "多边形面对象或者点数组",
+                    "type": "Polygon|Array<Point>"
+                }
+            ],
+            "return": {
+                "description": "多边形面或点数组构成图形的面积",
+                "type": "Number"
+            },
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 106,
+            "description": "class tkMapView\t\t\t\t *",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 583,
+            "description": "class tkMapMode\t\t\t\t *",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 1123,
+            "description": "class tkDataPool\t\t\t *",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap.GeoUtils"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 1742,
+            "description": "地图的容器",
+            "itemtype": "property",
+            "name": "container",
+            "type": "String | HTMLElement",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 1748,
+            "itemtype": "property",
+            "name": "{number}  gold - How much gold the party starts with.",
+            "type": "Number",
+            "class": "TMap.MapOptions",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 1976,
+            "description": "获取地图尺寸",
+            "itemtype": "method",
+            "name": "getSize",
+            "return": {
+                "description": "- 地图尺寸",
+                "type": "Size"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 1986,
+            "description": "获取地图边界",
+            "itemtype": "method",
+            "name": "getBounds",
+            "return": {
+                "description": "- 地图边界",
+                "type": "Bounds"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 1997,
+            "description": "地图尺寸",
+            "itemtype": "method",
+            "name": "pointToOverlayPixel",
+            "return": {
+                "description": "",
+                "type": "Pixel"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2007,
+            "description": "移动中心点并缩放",
+            "itemtype": "method",
+            "name": "centerAndZoom",
+            "params": [
+                {
+                    "name": "pt",
+                    "description": "中心点经纬度",
+                    "type": "Point"
+                },
+                {
+                    "name": "z",
+                    "description": "缩放级别",
+                    "type": "Number"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2023,
+            "description": "可以使用滚轮缩放",
+            "itemtype": "method",
+            "name": "enableScrollZooming",
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2030,
+            "description": "禁用滚轮缩放",
+            "itemtype": "method",
+            "name": "disableScrollZooming",
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2046,
+            "description": "获取缩放级别",
+            "itemtype": "method",
+            "name": "zoom",
+            "return": {
+                "description": "当前缩放级别",
+                "type": "Number"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2054,
+            "description": "获取缩放级别",
+            "itemtype": "method",
+            "name": "getZoom",
+            "return": {
+                "description": "当前缩放级别",
+                "type": "Number"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2062,
+            "description": "设置缩放级别",
+            "itemtype": "method",
+            "name": "setZoom",
+            "params": [
+                {
+                    "name": "zoom",
+                    "description": "- 设置缩放级别",
+                    "type": "Number"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2074,
+            "description": "设置地图中心",
+            "itemtype": "method",
+            "name": "setCenter",
+            "params": [
+                {
+                    "name": "pt",
+                    "description": "地图中心点经纬度",
+                    "type": "Point"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2102,
+            "description": "获取地图中心经纬度",
+            "itemtype": "method",
+            "name": "getCenter",
+            "return": {
+                "description": "地图中心经纬度",
+                "type": "Point"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2111,
+            "description": "获取地图缩放最大级别",
+            "itemtype": "method",
+            "name": "maxZoom",
+            "return": {
+                "description": "地图缩放最大级别",
+                "type": "Number"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2119,
+            "description": "设置地图缩放最大级别",
+            "itemtype": "method",
+            "name": "setMaxZoom",
+            "params": [
+                {
+                    "name": "maxZoom",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2133,
+            "description": "获取地图缩放最小级别",
+            "itemtype": "method",
+            "name": "minZoom",
+            "return": {
+                "description": "",
+                "type": "Number"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2142,
+            "description": "设置地图缩放最小级别",
+            "itemtype": "method",
+            "name": "setMinZoom",
+            "params": [
+                {
+                    "name": "minZoom",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2157,
+            "description": "获取地图的显示限制边界",
+            "itemtype": "method",
+            "name": "getBorderBounds",
+            "return": {
+                "description": "地图的显示限制边界。无边界限制时返回null",
+                "type": "TMap.Bounds"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2166,
+            "description": "设置地图的显示限制边界",
+            "itemtype": "method",
+            "name": "setBorderBounds",
+            "params": [
+                {
+                    "name": "bounds",
+                    "description": "地图的显示限制边界",
+                    "type": "TMap.Bounds"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2177,
+            "description": "向地图中添加覆盖物",
+            "itemtype": "method",
+            "name": "addOverlay",
+            "params": [
+                {
+                    "name": "overlay",
+                    "description": "待添加的覆盖物",
+                    "type": "Overlay"
+                },
+                {
+                    "name": "silent",
+                    "description": "是否为静默添加。静默添加在不重绘地图时，覆盖物不会显示",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2190,
+            "description": "从地图中移徐指定覆盖物",
+            "itemtype": "method",
+            "name": "removeOverlay",
+            "params": [
+                {
+                    "name": "overlay",
+                    "description": "待删除的覆盖物。该覆盖物须在之前添加到地图中。",
+                    "type": "Overlay"
+                },
+                {
+                    "name": "silent",
+                    "description": "是否为静默删除。静默删除在不重绘地图时，覆盖物不会消失",
+                    "type": "Boolean =false"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2212,
+            "description": "清除所有覆盖物",
+            "itemtype": "method",
+            "name": "clearOverlays",
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2226,
+            "description": "添加事件监听器",
+            "itemtype": "method",
+            "name": "addEventListener",
+            "params": [
+                {
+                    "name": "func",
+                    "description": "事件的响应函数",
+                    "type": "Function"
+                },
+                {
+                    "name": "events",
+                    "description": "事件名称",
+                    "type": "String | Array<string>"
+                }
+            ],
+            "return": {
+                "description": "事件监听器的索引号",
+                "type": "Number"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2238,
+            "description": "删除事件监听器",
+            "itemtype": "method",
+            "name": "removeEventListener",
+            "params": [
+                {
+                    "name": "listener",
+                    "description": "事件监听器索引号或者事件响应函数本身",
+                    "type": "Number | function"
+                }
+            ],
+            "return": {
+                "description": "删除的事件响应器索引号。如果删除失败，则返回0",
+                "type": "Number"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2249,
+            "description": "获取经纬度在屏幕上显示位置的像素坐标",
+            "itemtype": "method",
+            "name": "pointToPixel",
+            "params": [
+                {
+                    "name": "pt",
+                    "description": "指定的经纬度",
+                    "type": "Point"
+                }
+            ],
+            "return": {
+                "description": "经纬度对应的屏幕上的像素坐标",
+                "type": "Pixel"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2260,
+            "description": "获取屏幕上的像素坐标上的地图对应的经纬度",
+            "itemtype": "method",
+            "name": "pixelToPoint",
+            "params": [
+                {
+                    "name": "px",
+                    "description": "屏幕上的像素坐标",
+                    "type": "Pixel"
+                }
+            ],
+            "return": {
+                "description": "经纬度",
+                "type": "Point"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2272,
+            "description": "设置地图视图的视图窗口大小",
+            "itemtype": "method",
+            "name": "setViewport",
+            "params": [
+                {
+                    "name": "bounds",
+                    "description": "地图视图大小的描述",
+                    "type": "TMap.Bounds"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2287,
+            "description": "获取地图图层序列",
+            "itemtype": "method",
+            "name": "getLayers",
+            "return": {
+                "description": "地图图层数组，下标低者位于图层下层，逐着下标的增长，图层不断上移",
+                "type": "Array <TMap.Layer>"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2297,
+            "description": "获取地图的基础矢量图层",
+            "itemtype": "method",
+            "name": "getBasicLayer",
+            "return": {
+                "description": "地图的基础矢量图层",
+                "type": "TMap.Layer.LayerVector"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2305,
+            "description": "获取地图的卫星图层",
+            "itemtype": "method",
+            "name": "getImageLayer",
+            "return": {
+                "description": "地图的卫星栅格图层",
+                "type": "TMap.Layer.LayerBase"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2314,
+            "description": "获取动态画布",
+            "itemtype": "method",
+            "name": "getDynamicCanvas",
+            "params": [
+                {
+                    "name": "index",
+                    "description": "索引编号",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "动态画布对象",
+                "type": "TMap.Canvas.MapCanvasDynamic"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2331,
+            "description": "进入绘制模式。绘制模式下，地图会被锁死，",
+            "itemtype": "method",
+            "name": "enterDrawMode",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "绘制类型，可选值如下：\n* null\t自由绘制\n* \"circle\"\t画圆\n* \"rectangle\"\t矩形框",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "绘制选项\n- autoExit",
+                    "type": "Object"
+                }
+            ],
+            "example": [
+                "\n\n\t\t_map.enterDrawMode(\"rectangle\", {\n\t  \t\tautoExit: function(map) {\n\t\t   \t\tvar poly = map.exitDrawMode();\n\t\t     \tmap.addOverlay(poly);\n\t        },\n     });"
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2361,
+            "description": "退出绘制模式。退出绘制模式后会将在地图绘出的图形返回",
+            "itemtype": "method",
+            "name": "exitDrawMode",
+            "return": {
+                "description": "绘制模式下绘制的图形",
+                "type": "TMap.Shape"
+            },
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2376,
+            "description": "添加点击响应函数",
+            "itemtype": "method",
+            "name": "click",
+            "params": [
+                {
+                    "name": "func",
+                    "description": "点击响应函数",
+                    "type": "Function"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2387,
+            "description": "移除点击响应函数",
+            "itemtype": "method",
+            "name": "removeClick",
+            "params": [
+                {
+                    "name": "clk",
+                    "description": "点击响应的函数",
+                    "type": "Number | function"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2420,
+            "description": "地图初始化事件，仅在地图对象被创建后触发一次",
+            "itemtype": "event",
+            "name": "init",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "事件对象，event.type=\"init\"; event.target = map;",
+                    "type": "Object"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2427,
+            "description": "地图初始化就绪事件，仅在地图对象被创建后，地图开始正常的渲染显示时触发一次",
+            "itemtype": "event",
+            "name": "ready",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "事件对象，event.type=\"ready\"; event.target = map;",
+                    "type": "Object"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2434,
+            "description": "地图尺寸改变事件\n\n* 浏览器窗口尺寸发生改变，地图尺寸逐之改变时触发；\n* 调用地图API改变其尺寸后触发；",
+            "itemtype": "event",
+            "name": "resize",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "事件对象，event.type=\"resize\"; event.target = map;",
+                    "type": "Object"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2444,
+            "description": "地图数据就位事件",
+            "itemtype": "event",
+            "name": "tileready",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "事件对象，event.type=\"tileready\"; event.target = map;",
+                    "type": "Object"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2451,
+            "description": "地图缩放事件\n\n* 无论以何种方式，使地图发生缩放比例、级别改变时均会触发。",
+            "itemtype": "event",
+            "name": "zoom",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "事件对象，event.type=\"zoom\"; event.target = map;",
+                    "type": "Object"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2460,
+            "description": "地图缩放开始事件\n\n* 当地图缩放API调用条件下，缩放开始时触发；<br>\n* 当点击地图上的缩放按钮条件下，鼠标点击（长按不予响应）后松开时触发；<br>\n* 当鼠标滚轮滚动缩放动地图条件下，在上次滚动结束后，鼠标滚轮第一次发生滚动时触发；<br>\n* 当移动设备或支持多点触摸的设备上，两个（及以上）手指触摸后，第一次手指聚拢或分开的动作被识别时触发。",
+            "itemtype": "event",
+            "name": "zoombegin",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "事件对象，event.type=\"zoombegin\"; event.target = map;",
+                    "type": "Object"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2472,
+            "description": "地图缩放结束事件\n\n* 当地图缩放API调用条件下，缩放级别、比例到达目标级别、比例，缩放动作结束时触发；<br>\n* 当点击地图上的缩放按钮条件下，鼠标点击后，地图缩放动画结束时触发；<br>\n* 当鼠标滚轮滚动缩放动地图条件下，在上次滚动发生后200毫秒内没有再发生滚动时触发；<br>\n* 当移动设备或支持多点触摸的设备上，两个（及以上）手指触摸后，上次手指聚拢或分开的动作的被识后200毫秒内没有再发生类似的操作时触发。",
+            "itemtype": "event",
+            "name": "zoomend",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "事件对象，event.type=\"zoomend\"; event.target = map;",
+                    "type": "Object"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2484,
+            "description": "地图移动事件\n\n* 无论以何种方式，使地图发生中心点改变时均会触发。",
+            "itemtype": "event",
+            "name": "move",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "事件对象，event.type=\"move\"; event.target = map;",
+                    "type": "Object"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2493,
+            "description": "地图移动开始事件\n\n* 当地图移动API调用条件下，移动开始时触发；<br>\n* 当鼠标拖动地图移动条件下，鼠标左键按下后，第一次发生位置移动时触发；<br>\n* 当移动设备上，触摸拖动地图时，手指按下屏幕后，第一次发生识别位置改变时触发。",
+            "itemtype": "event",
+            "name": "movebegin",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "事件对象，event.type=\"movebegin\"; event.target = map;",
+                    "type": "Object"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/chizu.js",
+            "line": 2504,
+            "description": "地图移动结束事件。\n\n* 当地图移动API调用条件下，移动完成，地图中心点到达目标经纬度时触发；<br>\n* 当鼠标拖动地图移动条件下，鼠标左键松开时触发；<br>\n* 当移动设备上，触摸拖动地图时，手离开屏幕时触发。",
+            "itemtype": "event",
+            "name": "moveend",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "事件对象，event.type=\"moveend\"; event.target = map;",
+                    "type": "Object"
+                }
+            ],
+            "class": "TMap.Map",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 3,
+            "description": "获取一个扩展的视图范围，把上下左右都扩大一样的像素值。",
+            "params": [
+                {
+                    "name": "map",
+                    "description": "TkMapLib.Map的实例化对象",
+                    "type": "Map"
+                },
+                {
+                    "name": "bounds",
+                    "description": "TkMapLib.Bounds的实例化对象",
+                    "type": "TkMapLib.Bounds"
+                },
+                {
+                    "name": "gridSize",
+                    "description": "要扩大的像素值",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "返回扩大后的视图范围。",
+                "type": "TkMapLib.Bounds"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 24,
+            "description": "按照百度地图支持的世界范围对bounds进行边界处理",
+            "params": [
+                {
+                    "name": "bounds",
+                    "description": "TkMapLib.Bounds的实例化对象",
+                    "type": "TkMapLib.Bounds"
+                }
+            ],
+            "return": {
+                "description": "返回不越界的视图范围",
+                "type": "TkMapLib.Bounds"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 38,
+            "description": "对单个值进行边界处理。",
+            "params": [
+                {
+                    "name": "i",
+                    "description": "要处理的数值",
+                    "type": "Number"
+                },
+                {
+                    "name": "min",
+                    "description": "下边界值",
+                    "type": "Number"
+                },
+                {
+                    "name": "max",
+                    "description": "上边界值",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "返回不越界的数值",
+                "type": "Number"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 52,
+            "description": "判断给定的对象是否为数组",
+            "params": [
+                {
+                    "name": "source",
+                    "description": "要测试的对象",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "如果是数组返回true，否则返回false",
+                "type": "Boolean"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 62,
+            "description": "返回item在source中的索引位置",
+            "params": [
+                {
+                    "name": "item",
+                    "description": "要测试的对象",
+                    "type": "Object"
+                },
+                {
+                    "name": "source",
+                    "description": "数组",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "如果在数组内，返回索引，否则返回-1",
+                "type": "Number"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 180,
+            "description": "添加要聚合的标记数组。",
+            "itemtype": "method",
+            "name": "addMarkders",
+            "params": [
+                {
+                    "name": "markers",
+                    "description": "要聚合的标记数组",
+                    "type": "Array<Marker>"
+                }
+            ],
+            "return": {
+                "description": "无返回值。"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 200,
+            "description": "把一个标记添加到要聚合的标记数组中",
+            "params": [
+                {
+                    "name": "marker",
+                    "description": "要添加的标记",
+                    "type": "TkMapLib.Marker"
+                }
+            ],
+            "return": {
+                "description": "无返回值。"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 214,
+            "description": "添加一个聚合的标记。",
+            "itemtype": "method",
+            "name": "addMarker",
+            "params": [
+                {
+                    "name": "marker",
+                    "description": "要聚合的单个标记。",
+                    "type": "TkMapLib.Marker"
+                }
+            ],
+            "return": {
+                "description": "无返回值。"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 225,
+            "description": "根据所给定的标记，创建聚合点",
+            "return": {
+                "description": "无返回值"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 239,
+            "description": "根据标记的位置，把它添加到最近的聚合中",
+            "params": [
+                {
+                    "name": "marker",
+                    "description": "要进行聚合的单个标记",
+                    "type": "TkMapLib.Marker"
+                }
+            ],
+            "return": {
+                "description": "无返回值。"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 299,
+            "description": "清除上一次的聚合的结果",
+            "return": {
+                "description": "无返回值。"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 311,
+            "description": "清除某个聚合中的所有标记",
+            "return": {
+                "description": "无返回值"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 321,
+            "description": "把所有的标记从地图上清除",
+            "return": {
+                "description": "无返回值"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 332,
+            "description": "删除单个标记",
+            "params": [
+                {
+                    "name": "marker",
+                    "description": "需要被删除的marker",
+                    "type": "TkMapLib.Marker"
+                }
+            ],
+            "return": {
+                "description": "删除成功返回true，否则返回false",
+                "type": "Boolean"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 348,
+            "description": "删除单个标记",
+            "itemtype": "method",
+            "name": "removeMarker",
+            "params": [
+                {
+                    "name": "marker",
+                    "description": "需要被删除的marker",
+                    "type": "TkMapLib.Marker"
+                }
+            ],
+            "return": {
+                "description": "删除成功返回true，否则返回false",
+                "type": "Boolean"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 364,
+            "description": "删除一组标记",
+            "itemtype": "method",
+            "name": "removeMarkers",
+            "params": [
+                {
+                    "name": "markers",
+                    "description": "需要被删除的marker数组",
+                    "type": "Array<TkMapLib.Marker>"
+                }
+            ],
+            "return": {
+                "description": "删除成功返回true，否则返回false",
+                "type": "Boolean"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 385,
+            "description": "从地图上彻底清除所有的标记",
+            "itemtype": "method",
+            "name": "clearMarkers",
+            "return": {
+                "description": "无返回值"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 396,
+            "description": "重新生成，比如改变了属性等",
+            "return": {
+                "description": "无返回值"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 410,
+            "description": "获取网格大小",
+            "itemtype": "method",
+            "name": "getGridSize",
+            "return": {
+                "description": "网格大小",
+                "type": "Number"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 419,
+            "description": "设置网格大小",
+            "itemtype": "method",
+            "name": "setGridSize",
+            "params": [
+                {
+                    "name": "size",
+                    "description": "网格大小",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "无返回值"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 430,
+            "description": "获取聚合的最大缩放级别。",
+            "itemtype": "method",
+            "name": "getMaxZoom",
+            "return": {
+                "description": "聚合的最大缩放级别。",
+                "type": "Number"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 439,
+            "description": "设置聚合的最大缩放级别",
+            "itemtype": "method",
+            "name": "setMaxZoom",
+            "params": [
+                {
+                    "name": "maxZoom",
+                    "description": "聚合的最大缩放级别",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "无返回值"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 450,
+            "description": "获取聚合的样式风格集合",
+            "itemtype": "method",
+            "name": "getStyles",
+            "return": {
+                "description": "聚合的样式风格集合",
+                "type": "Array<IconStyle>"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 459,
+            "description": "设置聚合的样式风格集合",
+            "itemtype": "method",
+            "name": "setStyles",
+            "params": [
+                {
+                    "name": "styles",
+                    "description": "样式风格数组",
+                    "type": "Array<IconStyle>"
+                }
+            ],
+            "return": {
+                "description": "无返回值"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 470,
+            "description": "获取单个聚合的最小数量。",
+            "itemtype": "method",
+            "name": "getMinClusterSize",
+            "return": {
+                "description": "单个聚合的最小数量。",
+                "type": "Number"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 479,
+            "description": "设置单个聚合的最小数量。",
+            "itemtype": "method",
+            "name": "setMinClusterSize",
+            "params": [
+                {
+                    "name": "size",
+                    "description": "单个聚合的最小数量。",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "无返回值。"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 490,
+            "description": "获取单个聚合的落脚点是否是聚合内所有标记的平均中心。",
+            "itemtype": "method",
+            "name": "isAverageCenter",
+            "return": {
+                "description": "true或false。",
+                "type": "Boolean"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 499,
+            "description": "获取聚合的Map实例。",
+            "itemtype": "method",
+            "name": "getMap",
+            "return": {
+                "description": "Map的示例。",
+                "type": "TMap.Map"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 508,
+            "description": "获取所有的标记数组。",
+            "itemtype": "method",
+            "name": "getMarkers",
+            "return": {
+                "description": "标记数组。",
+                "type": "Array<Marker>"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 517,
+            "description": "获取聚合的总数量。",
+            "itemtype": "method",
+            "name": "getClustersCount",
+            "return": {
+                "description": "聚合的总数量。",
+                "type": "Number"
+            },
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 530,
+            "description": "卸载数据",
+            "itemtype": "method",
+            "name": "uninstall",
+            "class": "TMap.MarkerClusterer",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 562,
+            "description": "向该聚合添加一个标记。",
+            "itemtype": "method",
+            "name": "addMarker",
+            "params": [
+                {
+                    "name": "marker",
+                    "description": "要添加的标记。",
+                    "type": "Marker"
+                }
+            ],
+            "return": {
+                "description": "无返回值。"
+            },
+            "class": "TMap.Cluster",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 605,
+            "description": "判断一个标记是否在该聚合中。",
+            "itemtype": "method",
+            "name": "isMarkerInCluster",
+            "params": [
+                {
+                    "name": "marker",
+                    "description": "要判断的标记。",
+                    "type": "Marker"
+                }
+            ],
+            "return": {
+                "description": "true或false。",
+                "type": "Boolean"
+            },
+            "class": "TMap.Cluster",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 624,
+            "description": "判断一个标记是否在该聚合网格范围中。",
+            "itemtype": "method",
+            "name": "isMarkerInClusterBounds",
+            "params": [
+                {
+                    "name": "marker",
+                    "description": "要判断的标记。",
+                    "type": "Marker"
+                }
+            ],
+            "return": {
+                "description": "true或false。",
+                "type": "Boolean"
+            },
+            "class": "TMap.Cluster",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 638,
+            "description": "更新该聚合的网格范围。",
+            "itemtype": "method",
+            "name": "updateGridBounds",
+            "return": {
+                "description": "无返回值。"
+            },
+            "class": "TMap.Cluster",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 648,
+            "description": "更新该聚合的显示样式，也即TextIconOverlay。",
+            "itemtype": "method",
+            "name": "updateClusterMarker",
+            "return": {
+                "description": "无返回值。"
+            },
+            "class": "TMap.Cluster",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 678,
+            "description": "删除该聚合。",
+            "itemtype": "method",
+            "name": "remove",
+            "return": {
+                "description": "无返回值。"
+            },
+            "class": "TMap.Cluster",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 693,
+            "description": "获取该聚合所包含的所有标记的最小外接矩形的范围。",
+            "itemtype": "method",
+            "name": "getBounds",
+            "return": {
+                "description": "计算出的范围。",
+                "type": "TkMapLib.Bounds"
+            },
+            "class": "TMap.Cluster",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/clusterer.js",
+            "line": 706,
+            "description": "获取该聚合的落脚点。",
+            "itemtype": "method",
+            "name": "getCenter",
+            "return": {
+                "description": "该聚合的落脚点。",
+                "type": "TkMapLib.Point"
+            },
+            "class": "TMap.Cluster",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/layer.js",
+            "line": 10,
+            "description": "定义了图层相关的内容",
+            "class": "TMap.Layer.LayerBase",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/layer.js",
+            "line": 37,
+            "description": "图层名称",
+            "itemtype": "property",
+            "name": "name",
+            "type": "String",
+            "class": "TMap.Layer.LayerBase",
+            "namespace": "TMap.Layer"
+        },
+        {
+            "file": "src/layer.js",
+            "line": 51,
+            "description": "图层可见性",
+            "itemtype": "property",
+            "name": "visible",
+            "type": "Boolean",
+            "default": "true",
+            "class": "TMap.Layer.LayerBase",
+            "namespace": "TMap.Layer"
+        },
+        {
+            "file": "src/layer.js",
+            "line": 59,
+            "description": "图层最小可见级别",
+            "itemtype": "property",
+            "name": "minZ",
+            "type": "Number",
+            "default": "4",
+            "class": "TMap.Layer.LayerBase",
+            "namespace": "TMap.Layer"
+        },
+        {
+            "file": "src/layer.js",
+            "line": 66,
+            "description": "图层最大可见级别",
+            "itemtype": "property",
+            "name": "maxZ",
+            "type": "Number",
+            "default": "19",
+            "class": "TMap.Layer.LayerBase",
+            "namespace": "TMap.Layer"
+        },
+        {
+            "file": "src/layer.js",
+            "line": 229,
+            "description": "切换过滤器",
+            "itemtype": "method",
+            "name": "toggleFilter",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "需要切换过滤的地物类型",
+                    "type": "String"
+                }
+            ],
+            "class": "TMap.Layer.LayerVector",
+            "namespace": "TMap.Layer"
+        },
+        {
+            "file": "src/layer.js",
+            "line": 253,
+            "description": "判断指定类型地物是否要被过滤",
+            "itemtype": "method",
+            "name": "checkFilter",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "类型是否要被过滤",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "指定的地物类型是否被过滤掉",
+                "type": "Boolean"
+            },
+            "class": "TMap.Layer.LayerVector",
+            "namespace": "TMap.Layer"
+        },
+        {
+            "file": "src/layer.js",
+            "line": 264,
+            "description": "高亮指定类型地物",
+            "itemtype": "method",
+            "name": "boldFeature",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "待比较的Bounds对象",
+                    "type": "String"
+                }
+            ],
+            "class": "TMap.Layer.LayerVector",
+            "namespace": "TMap.Layer"
+        },
+        {
+            "file": "src/layer.js",
+            "line": 288,
+            "description": "检查地物类型是否需要高亮显示",
+            "itemtype": "method",
+            "name": "checkBoldFeature",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "待检查的地物类型",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "是否是需要高亮显示",
+                "type": "Boolean"
+            },
+            "class": "TMap.Layer.LayerVector",
+            "namespace": "TMap.Layer"
+        },
+        {
+            "file": "src/layer.js",
+            "line": 299,
+            "description": "自定义地物显示风格",
+            "itemtype": "method",
+            "name": "customStyle",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "待定义的地物类型",
+                    "type": "String"
+                },
+                {
+                    "name": "param",
+                    "description": "{offset, value}",
+                    "type": "Object"
+                }
+            ],
+            "class": "TMap.Layer.LayerVector",
+            "namespace": "TMap.Layer"
+        },
+        {
+            "file": "src/layer.js",
+            "line": 318,
+            "description": "清除当前视图的所有自定义风格",
+            "itemtype": "method",
+            "name": "clearCustomStyle",
+            "class": "TMap.Layer.LayerVector",
+            "namespace": "TMap.Layer"
+        },
+        {
+            "file": "src/layer.js",
+            "line": 334,
+            "description": "获取视图名称列表",
+            "itemtype": "method",
+            "name": "styleViewNames",
+            "return": {
+                "description": "视图名称列表",
+                "type": "Array"
+            },
+            "class": "TMap.Layer.LayerVector",
+            "namespace": "TMap.Layer"
+        },
+        {
+            "file": "src/layer.js",
+            "line": 346,
+            "description": "设置当前风格视图名",
+            "itemtype": "method",
+            "name": "setStyleView",
+            "params": [
+                {
+                    "name": "svn",
+                    "description": "地图风格名称",
+                    "type": "String"
+                }
+            ],
+            "class": "TMap.Layer.LayerVector",
+            "namespace": "TMap.Layer"
+        },
+        {
+            "file": "src/layer.js",
+            "line": 405,
+            "description": "WMTS地图服务的URL接口模板。模板中的标识说明如下：\n\n* %{svr}\t: 地图的服务器编号 0~8\n* %{x} : 地图瓦片的Column属性\n* %{y} : 地图瓦片的Row属性\n* %{z} : 地图瓦片的Matrix属性",
+            "itemtype": "property",
+            "name": "urlPattern",
+            "type": "String",
+            "example": [
+                "\n\n\t\tlyr = new TMap.Layer.LayerWMTS(\"layer\", \"http://t%{svr}.ditu.net/wmts/%{z}/%{x}/%{y}\");\n\t\tmap.getLayers().push(lyr);"
+            ],
+            "class": "TMap.Layer.LayerWMTS",
+            "namespace": "TMap.Layer"
+        },
+        {
+            "file": "src/layer.js",
+            "line": 522,
+            "description": "WMS地图服务的URL接口模板。模板中的标识说明如下：\n\n* %{svr}\t: 地图的服务器编号 0~8\n* %{lon} : 地图显示区域西侧的经度\n* %{LON} : 地图显示区域东侧的经度\n* %{lat} : 地图显示区域南侧的纬度\n* %{LAT} : 地图显示区域北侧的纬度",
+            "itemtype": "property",
+            "name": "urlPattern",
+            "type": "String",
+            "example": [
+                "\n\n\t\tlyr = new TMap.Layer.LayerWMTS(\"layer\", \"http://t%{svr}.ditu.net/wms?bbox=%{lon},%{LON},%{lat},%{LAT}\");\n\t\tmap.getLayers().push(lyr);"
+            ],
+            "class": "TMap.Layer.LayerWMS",
+            "namespace": "TMap.Layer"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 44,
+            "description": "地理经度",
+            "itemtype": "property",
+            "name": "lon",
+            "type": "Number",
+            "class": "TMap.Point",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 51,
+            "description": "地理纬度",
+            "itemtype": "property",
+            "name": "lat",
+            "type": "Number",
+            "class": "TMap.Point",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 59,
+            "description": "判断是否相等",
+            "itemtype": "method",
+            "name": "equals",
+            "params": [
+                {
+                    "name": "other",
+                    "description": "-",
+                    "type": "TMap.Point"
+                }
+            ],
+            "return": {
+                "description": "是否相等",
+                "type": "Boolean"
+            },
+            "class": "TMap.Point",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 70,
+            "description": "计算与另一个经纬度之间的距离，单位米",
+            "itemtype": "method",
+            "name": "distance",
+            "params": [
+                {
+                    "name": "p",
+                    "description": "经度或是经纬度对象",
+                    "type": "TMap.Point | number"
+                },
+                {
+                    "name": "v",
+                    "description": "纬度，当p为经纬度对象时，该参数会被忽略",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "两个经纬度之间的距离",
+                "type": "Number"
+            },
+            "class": "TMap.Point",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 93,
+            "description": "将数组、参数对组合成Point对象",
+            "itemtype": "method",
+            "name": "toPoint",
+            "return": {
+                "description": "组合后的Point对象",
+                "type": "TMap.Point"
+            },
+            "class": "TMap.Point",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 138,
+            "description": "X轴坐标",
+            "itemtype": "property",
+            "name": "x",
+            "type": "Number",
+            "class": "TMap.Pixel",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 143,
+            "description": "Y轴坐标",
+            "itemtype": "property",
+            "name": "y",
+            "type": "Number",
+            "class": "TMap.Pixel",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 154,
+            "description": "判断Pixel对象是否相等",
+            "itemtype": "method",
+            "name": "equals",
+            "params": [
+                {
+                    "name": "px",
+                    "description": "待比较的Pixel对象",
+                    "type": "TMap.Pixel"
+                }
+            ],
+            "return": {
+                "description": "是否相同",
+                "type": "Boolean"
+            },
+            "class": "TMap.Pixel",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 165,
+            "description": "将数组、参数对组合成Pixel对象",
+            "itemtype": "method",
+            "name": "toPixel",
+            "return": {
+                "description": "组合后的Pixel对象",
+                "type": "TMap.Pixel"
+            },
+            "class": "TMap.Pixel",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 200,
+            "description": "宽度数值",
+            "itemtype": "property",
+            "name": "width",
+            "type": "Number",
+            "class": "TMap.Size",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 206,
+            "description": "高度数值",
+            "itemtype": "property",
+            "name": "height",
+            "type": "Number",
+            "class": "TMap.Size",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 213,
+            "description": "判断Size对象是否相等",
+            "itemtype": "method",
+            "name": "equals",
+            "params": [
+                {
+                    "name": "Other",
+                    "description": "待比较的Size对象",
+                    "type": "TMap.Size"
+                }
+            ],
+            "return": {
+                "description": "是否相等",
+                "type": "Boolean"
+            },
+            "class": "TMap.Size",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 238,
+            "description": "判断Bounds对象是否相等",
+            "itemtype": "method",
+            "name": "equals",
+            "params": [
+                {
+                    "name": "bd",
+                    "description": "待比较的Bounds对象",
+                    "type": "TMap.Bounds"
+                }
+            ],
+            "return": {
+                "description": "是否相等",
+                "type": "Boolean"
+            },
+            "class": "TMap.Bounds",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 248,
+            "description": "判断Point经纬度对象是在Bounds范围内",
+            "itemtype": "method",
+            "name": "containsPoint",
+            "params": [
+                {
+                    "name": "pt",
+                    "description": "待比较的Point对象",
+                    "type": "TMap.Point"
+                }
+            ],
+            "return": {
+                "description": "是否在范围内",
+                "type": "Boolean"
+            },
+            "class": "TMap.Bounds",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 259,
+            "description": "获取Bounds对象的中心点经纬度",
+            "itemtype": "method",
+            "name": "getCenter",
+            "return": {
+                "description": "中心点经纬度对象",
+                "type": "TMap.Point"
+            },
+            "class": "TMap.Bounds",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 269,
+            "description": "判断Bounds对象是否为空",
+            "itemtype": "method",
+            "name": "isEmpty",
+            "return": {
+                "description": "是否为空",
+                "type": "Boolean"
+            },
+            "class": "TMap.Bounds",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 279,
+            "description": "获取Bounds对象的西南点经纬度",
+            "itemtype": "method",
+            "name": "getSouthWest",
+            "return": {
+                "description": "西南点经纬度",
+                "type": "TMap.Point"
+            },
+            "class": "TMap.Bounds",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 289,
+            "description": "获取Bounds对象的东北点经纬度",
+            "itemtype": "method",
+            "name": "getNorthEast",
+            "return": {
+                "description": "东北点经纬度",
+                "type": "TMap.Point"
+            },
+            "class": "TMap.Bounds",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 299,
+            "description": "获取Bounds对象的跨度",
+            "itemtype": "method",
+            "name": "toSpan",
+            "return": {
+                "description": "Bounds对象的跨度",
+                "type": "TMap.Size"
+            },
+            "class": "TMap.Bounds",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 309,
+            "description": "扩展Bounds对象所覆盖的范围，当经纬度不在其范围内时， Bounds对象会自动扩展为能覆盖原范围和经纬度的最小范围",
+            "itemtype": "method",
+            "name": "extend",
+            "params": [
+                {
+                    "name": "待扩展的经纬度",
+                    "description": "",
+                    "type": "TMap.Point"
+                }
+            ],
+            "class": "TMap.Bounds",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 346,
+            "description": "将覆盖物可见属性设为显示",
+            "itemtype": "method",
+            "name": "show",
+            "class": "TMap.Overlay",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 353,
+            "description": "将覆盖物可见属性设为隐藏",
+            "itemtype": "method",
+            "name": "hide",
+            "class": "TMap.Overlay",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 360,
+            "description": "将覆盖物可见属性在显示与隐藏之间切换",
+            "itemtype": "method",
+            "name": "toggle",
+            "class": "TMap.Overlay",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 370,
+            "description": "获取覆盖物可见属性",
+            "itemtype": "method",
+            "name": "getVisible",
+            "return": {
+                "description": "是否可见，true为显示；false为隐藏",
+                "type": "Boolean"
+            },
+            "class": "TMap.Overlay",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 378,
+            "description": "获取地图",
+            "itemtype": "method",
+            "name": "getMap",
+            "return": {
+                "description": "是否相等",
+                "type": "Boolean"
+            },
+            "class": "TMap.Overlay",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 397,
+            "description": "Shape类覆盖物的主色",
+            "itemtype": "property",
+            "name": "color",
+            "type": "String",
+            "default": "#ff8800",
+            "class": "TMap.Shape",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 426,
+            "description": "Circle类覆盖物的中心点经纬度",
+            "itemtype": "property",
+            "name": "point",
+            "type": "TMap.Point",
+            "class": "TMap.Circle",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 432,
+            "description": "Circle类覆盖物的半径，单位为米",
+            "itemtype": "property",
+            "name": "radius",
+            "type": "Number",
+            "class": "TMap.Circle",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 442,
+            "description": "Circle类覆盖物的描边宽度",
+            "itemtype": "property",
+            "name": "width",
+            "type": "Number",
+            "default": "3",
+            "class": "TMap.Circle",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 449,
+            "description": "dash属性，用于描圆形覆盖物的描边线的虚线线型。默认为[]，表示为实线；例如，[5,5]表示为5像素实，5像素虚的虚线线型",
+            "itemtype": "property",
+            "name": "dash",
+            "type": "Array",
+            "default": "[]",
+            "class": "TMap.Circle",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 455,
+            "description": "color属性，用于描述圆形的描边颜色。为null时不描边。",
+            "itemtype": "property",
+            "name": "color",
+            "type": "String",
+            "default": "#ff0000",
+            "class": "TMap.Circle",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 462,
+            "description": "fillColor属性，用于描述圆形覆盖物的填充颜色。为null时不填充",
+            "itemtype": "property",
+            "name": "fillColor",
+            "type": "String",
+            "default": "#ff8800",
+            "class": "TMap.Circle",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 594,
+            "description": "color属性，用于描述折线形的描边颜色。",
+            "itemtype": "property",
+            "name": "color",
+            "type": "String",
+            "default": "#ff8800",
+            "class": "TMap.Polyline",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 600,
+            "description": "width属性，用于描述多边形覆盖物的描边线型的宽度。默认为3",
+            "itemtype": "property",
+            "name": "width",
+            "type": "Number",
+            "default": "3",
+            "class": "TMap.Polyline",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 607,
+            "description": "dash属性，用于描述多边形覆盖物的描边线的虚线线型。默认为[]，表示为实线；例如，[5,5]表示为5像素实，5像素虚的虚线线型",
+            "itemtype": "property",
+            "name": "dash",
+            "type": "Array",
+            "default": "[]",
+            "class": "TMap.Polyline",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 666,
+            "description": "color属性，用于描述多边形的填充颜色。",
+            "itemtype": "property",
+            "name": "color",
+            "type": "String",
+            "default": "#ff8800",
+            "class": "TMap.Polygon",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 672,
+            "description": "strokeColor属性，用于描述多边形覆盖物的描边颜色。默认为#ff0000",
+            "itemtype": "property",
+            "name": "strokeColor",
+            "type": "String",
+            "default": "#ff0000",
+            "class": "TMap.Polygon",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 679,
+            "description": "width属性，用于描述多边形覆盖物的描边线型的宽度。默认为3",
+            "itemtype": "property",
+            "name": "width",
+            "type": "Number",
+            "default": "3",
+            "class": "TMap.Polygon",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 685,
+            "description": "dash属性，用于描述多边形覆盖物的描边线的虚线线型。默认为[]，表示为实线；例如，[5,5]表示为5像素实，5像素虚的虚线线型",
+            "itemtype": "property",
+            "name": "dash",
+            "type": "Array",
+            "default": "[]",
+            "class": "TMap.Polygon",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 751,
+            "description": "设置点标注的经纬度",
+            "itemtype": "method",
+            "name": "setPoint",
+            "params": [
+                {
+                    "name": "pt",
+                    "description": "标注位置的经纬度",
+                    "type": "TMap.Point"
+                }
+            ],
+            "class": "TMap.DOMTagOverlay",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 760,
+            "description": "获取点标注的经纬度",
+            "itemtype": "method",
+            "name": "getPoint",
+            "return": {
+                "description": "标注位置的经纬度",
+                "type": "TMap.Point"
+            },
+            "class": "TMap.DOMTagOverlay",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 830,
+            "description": "添加点击事件响应函数",
+            "itemtype": "method",
+            "name": "click",
+            "params": [
+                {
+                    "name": "func",
+                    "description": "待添加的鼠标点击事件函数",
+                    "type": "Function"
+                }
+            ],
+            "class": "TMap.DOMTagOverlay",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 855,
+            "description": "width属性，用于描述Marker覆盖物的展示图形的宽度。该属性不要直接修改，如有修改需要，请使用setSize方法。",
+            "itemtype": "property",
+            "name": "width",
+            "type": "Number",
+            "class": "TMap.Marker",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 859,
+            "description": "height属性，用于描述Marker覆盖物的展示图形的高度。该属性不要直接修改，如有修改需要，请使用setSize方法。",
+            "itemtype": "property",
+            "name": "height",
+            "type": "Number",
+            "class": "TMap.Marker",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 865,
+            "description": "offsetX属性，用于描述Marker覆盖物的展示图形相对锚点的X轴上的偏移量。该属性不要直接修改，如有修改需要，请使用setOffset方法。",
+            "itemtype": "property",
+            "name": "offsetX",
+            "type": "Number",
+            "default": "0",
+            "class": "TMap.Marker",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 870,
+            "description": "offsetY属性，用于描述Marker覆盖物的展示图形相对锚点的Y轴上的偏移量。该属性不要直接修改，如有修改需要，请使用setOffset方法。",
+            "itemtype": "property",
+            "name": "offsetY",
+            "type": "Number",
+            "default": "0",
+            "class": "TMap.Marker",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 910,
+            "description": "设置图片",
+            "itemtype": "method",
+            "name": "setImage",
+            "params": [
+                {
+                    "name": "url",
+                    "description": "图片的URL",
+                    "type": "String"
+                }
+            ],
+            "class": "TMap.Marker",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 925,
+            "description": "设置图片",
+            "itemtype": "method",
+            "name": "getImage",
+            "return": {
+                "description": "图片的URL",
+                "type": "String"
+            },
+            "class": "TMap.Marker",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 935,
+            "description": "设置Marker的尺寸大小",
+            "itemtype": "method",
+            "name": "setSize",
+            "params": [
+                {
+                    "name": "width",
+                    "description": "宽度",
+                    "type": "Number"
+                },
+                {
+                    "name": "height",
+                    "description": "高度",
+                    "type": "Number"
+                }
+            ],
+            "class": "TMap.Marker",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 950,
+            "description": "设置对锚点的偏移量",
+            "itemtype": "method",
+            "name": "setOffset",
+            "params": [
+                {
+                    "name": "ox",
+                    "description": "偏移对象或X轴上相对锚点的偏移量",
+                    "type": "TMap.Pixel | number"
+                },
+                {
+                    "name": "oy",
+                    "description": "Y轴上相对锚点的偏移量；当第一个参数为Pixel对象时，此参数会被忽略",
+                    "type": "Number"
+                }
+            ],
+            "class": "TMap.Marker",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 968,
+            "description": "获取相对锚点的偏移量",
+            "itemtype": "method",
+            "name": "getOffset",
+            "return": {
+                "description": "Marker相对锚点的偏移量",
+                "type": "TMap.Pixel"
+            },
+            "class": "TMap.Marker",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 977,
+            "description": "设置__锚点类型__\n\n<table border=\"1\">\n<tr><th>类型值&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>类型含义</th></tr>\n<tr><td>0</td><td>锚点位于中心点</td></tr>\n<tr><td>1</td><td>锚点位于正下方</td></tr>\n<tr><td>2</td><td>锚点位于左上角</td></tr>\n<tr><td>3</td><td>锚点位于正左方</td></tr>\n<tr><td>4</td><td>锚点位于左上角</td></tr>\n<tr><td>5</td><td>锚点位于正上方</td></tr>\n<tr><td>6</td><td>锚点位于右上角</td></tr>\n<tr><td>7</td><td>锚点位于正右方</td></tr>\n<tr><td>8</td><td>锚点位于右下角</td></tr>\n</table>",
+            "itemtype": "method",
+            "name": "setAnchor",
+            "params": [
+                {
+                    "name": "anchor",
+                    "description": "锚点类型",
+                    "type": "Number"
+                }
+            ],
+            "class": "TMap.Marker",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 1001,
+            "description": "获取__锚点类型__",
+            "itemtype": "method",
+            "name": "getAnchor",
+            "see": [
+                "setAnchor"
+            ],
+            "return": {
+                "description": "锚点类型，与setAnchor相同",
+                "type": "Number"
+            },
+            "class": "TMap.Marker",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 1091,
+            "description": "获取气泡风格",
+            "itemtype": "method",
+            "name": "getStyle",
+            "return": {
+                "description": "气泡风格编号",
+                "type": "Number"
+            },
+            "class": "TMap.Bubble",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 1101,
+            "description": "设置气泡风格",
+            "itemtype": "method",
+            "name": "setStyle",
+            "params": [
+                {
+                    "name": "气泡风格编号",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "class": "TMap.Bubble",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 1128,
+            "description": "HTMLElement要素的jQuery对象",
+            "itemtype": "property",
+            "name": "contentBox",
+            "type": "JQuery",
+            "class": "TMap.InfoWindow",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 1149,
+            "description": "设置文本",
+            "itemtype": "method",
+            "name": "text",
+            "params": [
+                {
+                    "name": "txt",
+                    "description": "InfoWindow上要显示的文本内容",
+                    "type": "String"
+                }
+            ],
+            "class": "TMap.InfoWindow",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 1163,
+            "description": "设置InfoWindow尺寸大小",
+            "itemtype": "method",
+            "name": "setSize",
+            "params": [
+                {
+                    "name": "w",
+                    "description": "尺寸对象或InfoWindow的宽度",
+                    "type": "TMap.Size | number"
+                },
+                {
+                    "name": "h",
+                    "description": "InfoWindow的高度，当第一个参数为尺寸对象时，该参数会被忽略",
+                    "type": "Number"
+                }
+            ],
+            "class": "TMap.InfoWindow",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 1175,
+            "description": "获取InfoWindow尺寸大小",
+            "itemtype": "method",
+            "name": "getSize",
+            "return": {
+                "description": "InfoWindow尺寸大小对象",
+                "type": "TMap.Size"
+            },
+            "class": "TMap.InfoWindow",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 1185,
+            "description": "获取偏移距离",
+            "itemtype": "method",
+            "name": "getOffset",
+            "return": {
+                "description": "偏移距离",
+                "type": "Number"
+            },
+            "class": "TMap.InfoWindow",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/mapapi.js",
+            "line": 1194,
+            "description": "设置偏移距离",
+            "itemtype": "method",
+            "name": "setOffset",
+            "params": [
+                {
+                    "name": "offset",
+                    "description": "待设置偏移点",
+                    "type": "Number"
+                }
+            ],
+            "class": "TMap.InfoWindow",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/shiori.js",
+            "line": 19,
+            "description": "class tkRect\t\t\t\t *",
+            "class": "",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/shiori.js",
+            "line": 44,
+            "description": "class tkGrid\t\t\t\t *",
+            "class": "",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/shiori.js",
+            "line": 161,
+            "description": "class tkLabel\t\t\t\t *",
+            "class": "",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/shiori.js",
+            "line": 363,
+            "description": "draw_dot9\n绘制带.9背景图的标注",
+            "class": "",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/shiori.js",
+            "line": 382,
+            "description": "draw_iconOnly\n绘制带.9背景图的标注",
+            "class": "",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/shiori.js",
+            "line": 459,
+            "description": "multipoint label related stuff",
+            "class": "",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/shiori.js",
+            "line": 563,
+            "description": "Output functions",
+            "class": "",
+            "namespace": "TMap"
+        },
+        {
+            "file": "src/styler.js",
+            "line": 419,
+            "description": "class render_config",
+            "class": "",
+            "namespace": "TMap"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\n地理信息计算工具类",
+            "line": " src/chirisugaku.js:16"
+        },
+        {
+            "message": "Missing item type\n墨卡托坐标转为经纬度",
+            "line": " src/chirisugaku.js:36"
+        },
+        {
+            "message": "Missing item type\n瓦片行列号转为经纬度",
+            "line": " src/chirisugaku.js:44"
+        },
+        {
+            "message": "Missing item type\n墨卡托坐标转为WMT像素坐标",
+            "line": " src/chirisugaku.js:52"
+        },
+        {
+            "message": "Missing item type\nWMT像素坐标转为墨卡托坐标",
+            "line": " src/chirisugaku.js:62"
+        },
+        {
+            "message": "Missing item type\n经度（弧度）转为-pi~pi",
+            "line": " src/chirisugaku.js:76"
+        },
+        {
+            "message": "Missing item type\n纬度（弧度）转为-pi/2~pi/2",
+            "line": " src/chirisugaku.js:83"
+        },
+        {
+            "message": "Missing item type\n经度（角度）转为-180~180",
+            "line": " src/chirisugaku.js:90"
+        },
+        {
+            "message": "Missing item type\n纬度（弧度）转为-90~90",
+            "line": " src/chirisugaku.js:97"
+        },
+        {
+            "message": "Missing item type\n生成二维莫顿码",
+            "line": " src/chirisugaku.js:105"
+        },
+        {
+            "message": "Missing item type\n生成瓦片主键",
+            "line": " src/chirisugaku.js:118"
+        },
+        {
+            "message": "Missing item type\n将v值夹在l和r之间即：[l, r)",
+            "line": " src/chirisugaku.js:143"
+        },
+        {
+            "message": "Missing item type\n将v值限制在T周期中即：[0, T)",
+            "line": " src/chirisugaku.js:152"
+        },
+        {
+            "message": "Missing item type\n地球半径",
+            "line": " src/chirisugaku.js:161"
+        },
+        {
+            "message": "Missing item type\n计算rect的bbox的r1和r2的交集",
+            "line": " src/chirisugaku.js:215"
+        },
+        {
+            "message": "Missing item type\n1. 点列的时针顺序不影响结果\n2. 此多边形是只有一个边界点列的复杂多边形\n</PRE>",
+            "line": " src/chirisugaku.js:300"
+        },
+        {
+            "message": "Missing item type\n1. 点列的时针顺序不影响结果\n2. 此多边形是只有一个边界点列的复杂多边形\n</PRE>",
+            "line": " src/chirisugaku.js:348"
+        },
+        {
+            "message": "Missing item type\nPUBLIC",
+            "line": " src/chirisugaku.js:386"
+        },
+        {
+            "message": "Missing item type\nclass tkMapView\t\t\t\t *",
+            "line": " src/chizu.js:106"
+        },
+        {
+            "message": "Missing item type\nclass tkMapMode\t\t\t\t *",
+            "line": " src/chizu.js:583"
+        },
+        {
+            "message": "Missing item type\nclass tkDataPool\t\t\t *",
+            "line": " src/chizu.js:1123"
+        },
+        {
+            "message": "Missing item type\n获取一个扩展的视图范围，把上下左右都扩大一样的像素值。",
+            "line": " src/clusterer.js:3"
+        },
+        {
+            "message": "Missing item type\n按照百度地图支持的世界范围对bounds进行边界处理",
+            "line": " src/clusterer.js:24"
+        },
+        {
+            "message": "Missing item type\n对单个值进行边界处理。",
+            "line": " src/clusterer.js:38"
+        },
+        {
+            "message": "Missing item type\n判断给定的对象是否为数组",
+            "line": " src/clusterer.js:52"
+        },
+        {
+            "message": "Missing item type\n返回item在source中的索引位置",
+            "line": " src/clusterer.js:62"
+        },
+        {
+            "message": "Missing item type\n把一个标记添加到要聚合的标记数组中",
+            "line": " src/clusterer.js:200"
+        },
+        {
+            "message": "Missing item type\n根据所给定的标记，创建聚合点",
+            "line": " src/clusterer.js:225"
+        },
+        {
+            "message": "Missing item type\n根据标记的位置，把它添加到最近的聚合中",
+            "line": " src/clusterer.js:239"
+        },
+        {
+            "message": "Missing item type\n清除上一次的聚合的结果",
+            "line": " src/clusterer.js:299"
+        },
+        {
+            "message": "Missing item type\n清除某个聚合中的所有标记",
+            "line": " src/clusterer.js:311"
+        },
+        {
+            "message": "Missing item type\n把所有的标记从地图上清除",
+            "line": " src/clusterer.js:321"
+        },
+        {
+            "message": "Missing item type\n删除单个标记",
+            "line": " src/clusterer.js:332"
+        },
+        {
+            "message": "Missing item type\n重新生成，比如改变了属性等",
+            "line": " src/clusterer.js:396"
+        },
+        {
+            "message": "Missing item type\n定义了图层相关的内容",
+            "line": " src/layer.js:10"
+        },
+        {
+            "message": "Missing item type\nclass tkRect\t\t\t\t *",
+            "line": " src/shiori.js:19"
+        },
+        {
+            "message": "Missing item type\nclass tkGrid\t\t\t\t *",
+            "line": " src/shiori.js:44"
+        },
+        {
+            "message": "Missing item type\nclass tkLabel\t\t\t\t *",
+            "line": " src/shiori.js:161"
+        },
+        {
+            "message": "Missing item type\ndraw_dot9\n绘制带.9背景图的标注",
+            "line": " src/shiori.js:363"
+        },
+        {
+            "message": "Missing item type\ndraw_iconOnly\n绘制带.9背景图的标注",
+            "line": " src/shiori.js:382"
+        },
+        {
+            "message": "Missing item type\nmultipoint label related stuff",
+            "line": " src/shiori.js:459"
+        },
+        {
+            "message": "Missing item type\nOutput functions",
+            "line": " src/shiori.js:563"
+        },
+        {
+            "message": "Missing item type\nclass render_config",
+            "line": " src/styler.js:419"
+        }
+    ]
+}

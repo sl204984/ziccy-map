@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<META charset="UTF-8" />
+		<META name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
+		<META HTTP-EQUIV="Expires" CONTENT="0"> 
+		<TITLE>老虎地图</TITLE>
+		<LINK rel="shortcut icon" type="image/x-icon" href="img/tkm_logo.ico">
+		<LINK rel="stylesheet" type="text/css" href="tkmap.css" />
+		<SCRIPT type="text/javascript" src="jquery.min.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="minified/js/main.min.js"></SCRIPT>
+		<SCRIPT type="text/javascript">
+if (!window.applicationCache) {
+	alert("upgrade your fuck browser, old coffin!");
+}
+window.addEventListener('load', init, false);
+
+function init() {
+	new TkMap.Map(document.body);
+}
+		 </SCRIPT>
+	</HEAD>
+	<BODY>
+		<div class="tkm-debug-info"></div>
+	</BODY>
+</HTML>

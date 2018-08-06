@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>TMap.Map - TMap SDK</title>
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-smart">
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <a class="navbar-brand mainlogo" href="">
+            <img alt="TMap SDK" src="http://120.55.46.163/webmap/img/tkm_logo.png" title="TMap SDK">
+                TMap SDK
+          </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav">
+                    <li><a href="http://120.55.46.163/webmap">首页</a>
+                    </li>
+                    <li><a href="http://120.55.46.163/SDK-site/doc">文档</a>
+                    </li>
+                    <li><a href="http://120.55.46.163/SDK-site/doc">示例</a>
+                    </li>
+                    <li><a href="http://120.55.46.163/SDK-site/downloads/web-sdk.zip">下载</a>
+                    </li>
+                </ul>
+               <div class="navbar-form navbar-right filterAPi" autocomplete="off">
+                <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
+                 <ul id="filterList" class="filterItems dropdown-menu" role="menu"></ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="sidebar">
+    <h3>Modules/Classes</h3>
+        <div id="api-tabview-filter">
+            <input id='txtSearch' type="search" class="form-control" placeholder="Type to filter Modules/Classes">
+        </div>
+        <dl id="sidebar_list">
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/TMap.html">TMap</a>
+                </dt>
+                <dd>
+                    <ul>
+                       <li>
+                           <a href="../classes/TMap.Dataset.html">TMap.Dataset</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.DatasetIterator.html">TMap.DatasetIterator</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.DatasetEntry.html">TMap.DatasetEntry</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.DrawerAgent.html">TMap.DrawerAgent</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Animater.html">TMap.Animater</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Canvas.MapCanvas.html">TMap.Canvas.MapCanvas</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Canvas.MapCanvasBasic.html">TMap.Canvas.MapCanvasBasic</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Canvas.MapCanvasOverlay.html">TMap.Canvas.MapCanvasOverlay</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Canvas.MapCanvasLabel.html">TMap.Canvas.MapCanvasLabel</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Canvas.MapCanvasDynamic.html">TMap.Canvas.MapCanvasDynamic</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.MapOptions.html">TMap.MapOptions</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Map.html">TMap.Map</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.MarkerClusterer.html">TMap.MarkerClusterer</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Cluster.html">TMap.Cluster</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Drawer.html">TMap.Drawer</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.scattermap.html">TMap.scattermap</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.heatmap.html">TMap.heatmap</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Layer.LayerBase.html">TMap.Layer.LayerBase</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Layer.LayerVector.html">TMap.Layer.LayerVector</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Layer.LayerWMTS.html">TMap.Layer.LayerWMTS</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Layer.LayerWMS.html">TMap.Layer.LayerWMS</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Point.html">TMap.Point</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Pixel.html">TMap.Pixel</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Size.html">TMap.Size</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Bounds.html">TMap.Bounds</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Overlay.html">TMap.Overlay</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Shape.html">TMap.Shape</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Circle.html">TMap.Circle</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.MultiPoint.html">TMap.MultiPoint</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Polyline.html">TMap.Polyline</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Polygon.html">TMap.Polygon</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.DOMTagOverlay.html">TMap.DOMTagOverlay</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Marker.html">TMap.Marker</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.TextIconOverlay.html">TMap.TextIconOverlay</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.Bubble.html">TMap.Bubble</a>
+                           <ul>
+                           </ul>
+                       </li>
+                       <li>
+                           <a href="../classes/TMap.InfoWindow.html">TMap.InfoWindow</a>
+                           <ul>
+                           </ul>
+                       </li>
+                    </ul>
+                </dd>
+        </dl>
+</div>
+    <div class="stdoc-content">
+        <!--     <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+    </form>
+ -->
+        <div class="apidocs">
+            <div id="docs-main">
+                <div class="content">
+                    <div class="page-header">
+    <h1>TMap.Map <small>Class</small></h1>
+</div>
+ <div class="well well-small sign-left3">
+      <div class="stdoc-code"><p>TMap地图视图主类</p>
+</div>
+ </div>
+<div class="well well-small sign-left2 container-fluid" id="classesItems">
+    <div class="row">
+        <div class="index-section methods col-sm-4">
+            <h3>Methods</h3>
+            <ul class="index-list methods">
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_addEventListener" data-tablink="addEventListener">addEventListener</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_addOverlay" data-tablink="addOverlay">addOverlay</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_centerAndZoom" data-tablink="centerAndZoom">centerAndZoom</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_clearOverlays" data-tablink="clearOverlays">clearOverlays</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_click" data-tablink="click">click</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_disableScrollZooming" data-tablink="disableScrollZooming">disableScrollZooming</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_enableScrollZooming" data-tablink="enableScrollZooming">enableScrollZooming</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_enterDrawMode" data-tablink="enterDrawMode">enterDrawMode</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_exitDrawMode" data-tablink="exitDrawMode">exitDrawMode</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_getBasicLayer" data-tablink="getBasicLayer">getBasicLayer</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_getBorderBounds" data-tablink="getBorderBounds">getBorderBounds</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_getBounds" data-tablink="getBounds">getBounds</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_getCenter" data-tablink="getCenter">getCenter</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_getDynamicCanvas" data-tablink="getDynamicCanvas">getDynamicCanvas</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_getImageLayer" data-tablink="getImageLayer">getImageLayer</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_getLayers" data-tablink="getLayers">getLayers</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_getSize" data-tablink="getSize">getSize</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_getZoom" data-tablink="getZoom">getZoom</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_maxZoom" data-tablink="maxZoom">maxZoom</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_minZoom" data-tablink="minZoom">minZoom</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_pixelToPoint" data-tablink="pixelToPoint">pixelToPoint</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_pointToOverlayPixel" data-tablink="pointToOverlayPixel">pointToOverlayPixel</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_pointToPixel" data-tablink="pointToPixel">pointToPixel</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_removeClick" data-tablink="removeClick">removeClick</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_removeEventListener" data-tablink="removeEventListener">removeEventListener</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_removeOverlay" data-tablink="removeOverlay">removeOverlay</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_setBorderBounds" data-tablink="setBorderBounds">setBorderBounds</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_setCenter" data-tablink="setCenter">setCenter</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_setMaxZoom" data-tablink="setMaxZoom">setMaxZoom</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_setMinZoom" data-tablink="setMinZoom">setMinZoom</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_setViewport" data-tablink="setViewport">setViewport</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_setZoom" data-tablink="setZoom">setZoom</a>
+                    </li>
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_zoom" data-tablink="zoom">zoom</a>
+                    </li>
+            </ul>
+        </div>
+        <div class="index-section properties col-sm-4">
+            <h3>Properties</h3>
+        </div>
+        <div class="index-section events col-sm-4">
+            <h3>Events</h3>
+            <ul class="index-list events">
+                    <li class="index-item event">
+                        <a href="#" data-tabid="#event" data-anchor="#event_init" data-tablink="init">init</a>
+                    </li>
+                    <li class="index-item event">
+                        <a href="#" data-tabid="#event" data-anchor="#event_move" data-tablink="move">move</a>
+                    </li>
+                    <li class="index-item event">
+                        <a href="#" data-tabid="#event" data-anchor="#event_movebegin" data-tablink="movebegin">movebegin</a>
+                    </li>
+                    <li class="index-item event">
+                        <a href="#" data-tabid="#event" data-anchor="#event_moveend" data-tablink="moveend">moveend</a>
+                    </li>
+                    <li class="index-item event">
+                        <a href="#" data-tabid="#event" data-anchor="#event_ready" data-tablink="ready">ready</a>
+                    </li>
+                    <li class="index-item event">
+                        <a href="#" data-tabid="#event" data-anchor="#event_resize" data-tablink="resize">resize</a>
+                    </li>
+                    <li class="index-item event">
+                        <a href="#" data-tabid="#event" data-anchor="#event_tileready" data-tablink="tileready">tileready</a>
+                    </li>
+                    <li class="index-item event">
+                        <a href="#" data-tabid="#event" data-anchor="#event_zoom" data-tablink="zoom">zoom</a>
+                    </li>
+                    <li class="index-item event">
+                        <a href="#" data-tabid="#event" data-anchor="#event_zoombegin" data-tablink="zoombegin">zoombegin</a>
+                    </li>
+                    <li class="index-item event">
+                        <a href="#" data-tabid="#event" data-anchor="#event_zoomend" data-tablink="zoomend">zoomend</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div>
+    <ul id="itemTab" class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#class">Detail</a></li>
+            <li><a data-toggle="tab" href="#method">Methods</a></li>
+            <li><a data-toggle="tab" href="#event">Events</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="class" class="tab-pane active">
+            <div class="well well-small classDetail sign-left1">
+                    Module: <a href="../modules/TMap.html">TMap</a>
+        </div>
+                <div class="constructor">
+                    <h2>Constructor</h2>
+                    <div id="method_TMap.Map" class="method item">
+    <h3 class="name">TMap.Map</h3>
+    <code>
+    TMap.Map
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        options
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+
+    <div class="description well well-small sign-left3">
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">options</code>
+                       <td> <span class="type">MapOptions</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <ul>
+<li>地图选项</li>
+</ul>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                </div>
+        </div>
+            <div id="method" class="tab-pane">
+                <h2 class="off-left">Methods</h2>
+                    <div id="method_addEventListener" class="method item">
+    <h3 class="name">addEventListener</h3>
+    <code>
+    addEventListener
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        func
+                </li>
+                <li class="arg">
+                        events
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+        <span class="returns-inline">
+            <span class="type">Number</span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>添加事件监听器</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">func</code>
+                       <td> <span class="type">Function</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>事件的响应函数</p>
+                    </div>
+                </tr>
+                <tr class="param">
+                       <td> <code class="param-name">events</code>
+                       <td> <span class="type">String | Array<string></span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>事件名称</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type">Number</span>]
+                    <p>事件监听器的索引号</p>
+            </div>
+        </div>
+</div>
+                    <div id="method_addOverlay" class="method item">
+    <h3 class="name">addOverlay</h3>
+    <code>
+    addOverlay
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        overlay
+                </li>
+                <li class="arg">
+                        silent
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>向地图中添加覆盖物</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">overlay</code>
+                       <td> <span class="type">Overlay</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>待添加的覆盖物</p>
+                    </div>
+                </tr>
+                <tr class="param">
+                       <td> <code class="param-name">silent</code>
+                       <td> <span class="type">Boolean</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>是否为静默添加。静默添加在不重绘地图时，覆盖物不会显示</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="method_centerAndZoom" class="method item">
+    <h3 class="name">centerAndZoom</h3>
+    <code>
+    centerAndZoom
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        pt
+                </li>
+                <li class="arg">
+                        z
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>移动中心点并缩放</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">pt</code>
+                       <td> <span class="type">Point</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>中心点经纬度</p>
+                    </div>
+                </tr>
+                <tr class="param">
+                       <td> <code class="param-name">z</code>
+                       <td> <span class="type">Number</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>缩放级别</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="method_clearOverlays" class="method item">
+    <h3 class="name">clearOverlays</h3>
+    <code>
+    clearOverlays
+        <span class="paren">()</span>
+    </code>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>清除所有覆盖物</p>
+</div>
+    </div>
+</div>
+                    <div id="method_click" class="method item">
+    <h3 class="name">click</h3>
+    <code>
+    click
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        func
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>添加点击响应函数</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">func</code>
+                       <td> <span class="type">Function</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>点击响应函数</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="method_disableScrollZooming" class="method item">
+    <h3 class="name">disableScrollZooming</h3>
+    <code>
+    disableScrollZooming
+        <span class="paren">()</span>
+    </code>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>禁用滚轮缩放</p>
+</div>
+    </div>
+</div>
+                    <div id="method_enableScrollZooming" class="method item">
+    <h3 class="name">enableScrollZooming</h3>
+    <code>
+    enableScrollZooming
+        <span class="paren">()</span>
+    </code>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>可以使用滚轮缩放</p>
+</div>
+    </div>
+</div>
+                    <div id="method_enterDrawMode" class="method item">
+    <h3 class="name">enterDrawMode</h3>
+    <code>
+    enterDrawMode
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        type
+                </li>
+                <li class="arg">
+                        options
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>进入绘制模式。绘制模式下，地图会被锁死，</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">type</code>
+                       <td> <span class="type">String</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>绘制类型，可选值如下：</p>
+<ul>
+<li>null    自由绘制</li>
+<li>"circle"    画圆</li>
+<li>"rectangle"    矩形框</li>
+</ul>
+                    </div>
+                </tr>
+                <tr class="param">
+                       <td> <code class="param-name">options</code>
+                       <td> <span class="type">Object</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>绘制选项</p>
+<ul>
+<li>autoExit</li>
+</ul>
+                    </div>
+                </tr>
+            </table>
+        </div>
+        <div class="example">
+            <h4>Example:</h4>
+            <ul class="nav nav-tabs example-list">
+            </ul>
+            <div class="example-content ">
+                <div class="stdoc-code"><pre class="code prettyprint"><code>    _map.enterDrawMode("rectangle", {
+          autoExit: function(map) {
+               var poly = map.exitDrawMode();
+             map.addOverlay(poly);
+        },
+ });</code></pre>
+</div>
+            </div>
+             <button class="btn btn-info btn-viewDemo" type="button">view demo</button>
+            <button class="btn btn-info btn-editDemo" type="button">edit code</button>
+        </div>
+</div>
+                    <div id="method_exitDrawMode" class="method item">
+    <h3 class="name">exitDrawMode</h3>
+    <code>
+    exitDrawMode
+        <span class="paren">()</span>
+    </code>
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/TMap.Shape.html" class="crosslink">TMap.Shape</a></span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>退出绘制模式。退出绘制模式后会将在地图绘出的图形返回</p>
+</div>
+    </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type"><a href="../classes/TMap.Shape.html" class="crosslink">TMap.Shape</a></span>]
+                    <p>绘制模式下绘制的图形</p>
+            </div>
+        </div>
+</div>
+                    <div id="method_getBasicLayer" class="method item">
+    <h3 class="name">getBasicLayer</h3>
+    <code>
+    getBasicLayer
+        <span class="paren">()</span>
+    </code>
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/TMap.Layer.LayerVector.html" class="crosslink">TMap.Layer.LayerVector</a></span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>获取地图的基础矢量图层</p>
+</div>
+    </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type"><a href="../classes/TMap.Layer.LayerVector.html" class="crosslink">TMap.Layer.LayerVector</a></span>]
+                    <p>地图的基础矢量图层</p>
+            </div>
+        </div>
+</div>
+                    <div id="method_getBorderBounds" class="method item">
+    <h3 class="name">getBorderBounds</h3>
+    <code>
+    getBorderBounds
+        <span class="paren">()</span>
+    </code>
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/TMap.Bounds.html" class="crosslink">TMap.Bounds</a></span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>获取地图的显示限制边界</p>
+</div>
+    </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type"><a href="../classes/TMap.Bounds.html" class="crosslink">TMap.Bounds</a></span>]
+                    <p>地图的显示限制边界。无边界限制时返回null</p>
+            </div>
+        </div>
+</div>
+                    <div id="method_getBounds" class="method item">
+    <h3 class="name">getBounds</h3>
+    <code>
+    getBounds
+        <span class="paren">()</span>
+    </code>
+        <span class="returns-inline">
+            <span class="type">Bounds</span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>获取地图边界</p>
+</div>
+    </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type">Bounds</span>]
+                    <ul>
+<li>地图边界</li>
+</ul>
+            </div>
+        </div>
+</div>
+                    <div id="method_getCenter" class="method item">
+    <h3 class="name">getCenter</h3>
+    <code>
+    getCenter
+        <span class="paren">()</span>
+    </code>
+        <span class="returns-inline">
+            <span class="type">Point</span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>获取地图中心经纬度</p>
+</div>
+    </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type">Point</span>]
+                    <p>地图中心经纬度</p>
+            </div>
+        </div>
+</div>
+                    <div id="method_getDynamicCanvas" class="method item">
+    <h3 class="name">getDynamicCanvas</h3>
+    <code>
+    getDynamicCanvas
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        index
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/TMap.Canvas.MapCanvasDynamic.html" class="crosslink">TMap.Canvas.MapCanvasDynamic</a></span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>获取动态画布</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">index</code>
+                       <td> <span class="type">Number</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>索引编号</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type"><a href="../classes/TMap.Canvas.MapCanvasDynamic.html" class="crosslink">TMap.Canvas.MapCanvasDynamic</a></span>]
+                    <p>动态画布对象</p>
+            </div>
+        </div>
+</div>
+                    <div id="method_getImageLayer" class="method item">
+    <h3 class="name">getImageLayer</h3>
+    <code>
+    getImageLayer
+        <span class="paren">()</span>
+    </code>
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/TMap.Layer.LayerBase.html" class="crosslink">TMap.Layer.LayerBase</a></span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>获取地图的卫星图层</p>
+</div>
+    </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type"><a href="../classes/TMap.Layer.LayerBase.html" class="crosslink">TMap.Layer.LayerBase</a></span>]
+                    <p>地图的卫星栅格图层</p>
+            </div>
+        </div>
+</div>
+                    <div id="method_getLayers" class="method item">
+    <h3 class="name">getLayers</h3>
+    <code>
+    getLayers
+        <span class="paren">()</span>
+    </code>
+        <span class="returns-inline">
+            <span class="type">Array <TMap.Layer></span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>获取地图图层序列</p>
+</div>
+    </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type">Array <TMap.Layer></span>]
+                    <p>地图图层数组，下标低者位于图层下层，逐着下标的增长，图层不断上移</p>
+            </div>
+        </div>
+</div>
+                    <div id="method_getSize" class="method item">
+    <h3 class="name">getSize</h3>
+    <code>
+    getSize
+        <span class="paren">()</span>
+    </code>
+        <span class="returns-inline">
+            <span class="type">Size</span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>获取地图尺寸</p>
+</div>
+    </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type">Size</span>]
+                    <ul>
+<li>地图尺寸</li>
+</ul>
+            </div>
+        </div>
+</div>
+                    <div id="method_getZoom" class="method item">
+    <h3 class="name">getZoom</h3>
+    <code>
+    getZoom
+        <span class="paren">()</span>
+    </code>
+        <span class="returns-inline">
+            <span class="type">Number</span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>获取缩放级别</p>
+</div>
+    </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type">Number</span>]
+                    <p>当前缩放级别</p>
+            </div>
+        </div>
+</div>
+                    <div id="method_maxZoom" class="method item">
+    <h3 class="name">maxZoom</h3>
+    <code>
+    maxZoom
+        <span class="paren">()</span>
+    </code>
+        <span class="returns-inline">
+            <span class="type">Number</span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>获取地图缩放最大级别</p>
+</div>
+    </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type">Number</span>]
+                    <p>地图缩放最大级别</p>
+            </div>
+        </div>
+</div>
+                    <div id="method_minZoom" class="method item">
+    <h3 class="name">minZoom</h3>
+    <code>
+    minZoom
+        <span class="paren">()</span>
+    </code>
+        <span class="returns-inline">
+            <span class="type">Number</span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>获取地图缩放最小级别</p>
+</div>
+    </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        <span class="type">Number</span>:
+            </div>
+        </div>
+</div>
+                    <div id="method_pixelToPoint" class="method item">
+    <h3 class="name">pixelToPoint</h3>
+    <code>
+    pixelToPoint
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        px
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+        <span class="returns-inline">
+            <span class="type">Point</span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>获取屏幕上的像素坐标上的地图对应的经纬度</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">px</code>
+                       <td> <span class="type">Pixel</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>屏幕上的像素坐标</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type">Point</span>]
+                    <p>经纬度</p>
+            </div>
+        </div>
+</div>
+                    <div id="method_pointToOverlayPixel" class="method item">
+    <h3 class="name">pointToOverlayPixel</h3>
+    <code>
+    pointToOverlayPixel
+        <span class="paren">()</span>
+    </code>
+        <span class="returns-inline">
+            <span class="type">Pixel</span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>地图尺寸</p>
+</div>
+    </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        <span class="type">Pixel</span>:
+            </div>
+        </div>
+</div>
+                    <div id="method_pointToPixel" class="method item">
+    <h3 class="name">pointToPixel</h3>
+    <code>
+    pointToPixel
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        pt
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+        <span class="returns-inline">
+            <span class="type">Pixel</span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>获取经纬度在屏幕上显示位置的像素坐标</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">pt</code>
+                       <td> <span class="type">Point</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>指定的经纬度</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type">Pixel</span>]
+                    <p>经纬度对应的屏幕上的像素坐标</p>
+            </div>
+        </div>
+</div>
+                    <div id="method_removeClick" class="method item">
+    <h3 class="name">removeClick</h3>
+    <code>
+    removeClick
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        clk
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>移除点击响应函数</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">clk</code>
+                       <td> <span class="type">Number | function</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>点击响应的函数</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="method_removeEventListener" class="method item">
+    <h3 class="name">removeEventListener</h3>
+    <code>
+    removeEventListener
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        listener
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+        <span class="returns-inline">
+            <span class="type">Number</span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>删除事件监听器</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">listener</code>
+                       <td> <span class="type">Number | function</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>事件监听器索引号或者事件响应函数本身</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type">Number</span>]
+                    <p>删除的事件响应器索引号。如果删除失败，则返回0</p>
+            </div>
+        </div>
+</div>
+                    <div id="method_removeOverlay" class="method item">
+    <h3 class="name">removeOverlay</h3>
+    <code>
+    removeOverlay
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        overlay
+                </li>
+                <li class="arg">
+                        silent
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>从地图中移徐指定覆盖物</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">overlay</code>
+                       <td> <span class="type">Overlay</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>待删除的覆盖物。该覆盖物须在之前添加到地图中。</p>
+                    </div>
+                </tr>
+                <tr class="param">
+                       <td> <code class="param-name">silent</code>
+                       <td> <span class="type">Boolean =false</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>是否为静默删除。静默删除在不重绘地图时，覆盖物不会消失</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="method_setBorderBounds" class="method item">
+    <h3 class="name">setBorderBounds</h3>
+    <code>
+    setBorderBounds
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        bounds
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>设置地图的显示限制边界</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">bounds</code>
+                       <td> <span class="type"><a href="../classes/TMap.Bounds.html" class="crosslink">TMap.Bounds</a></span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>地图的显示限制边界</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="method_setCenter" class="method item">
+    <h3 class="name">setCenter</h3>
+    <code>
+    setCenter
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        pt
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>设置地图中心</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">pt</code>
+                       <td> <span class="type">Point</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>地图中心点经纬度</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="method_setMaxZoom" class="method item">
+    <h3 class="name">setMaxZoom</h3>
+    <code>
+    setMaxZoom
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        maxZoom
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>设置地图缩放最大级别</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">maxZoom</code>
+                       <td> <span class="type">Number</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="method_setMinZoom" class="method item">
+    <h3 class="name">setMinZoom</h3>
+    <code>
+    setMinZoom
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        minZoom
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>设置地图缩放最小级别</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">minZoom</code>
+                       <td> <span class="type">Number</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="method_setViewport" class="method item">
+    <h3 class="name">setViewport</h3>
+    <code>
+    setViewport
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        bounds
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>设置地图视图的视图窗口大小</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">bounds</code>
+                       <td> <span class="type"><a href="../classes/TMap.Bounds.html" class="crosslink">TMap.Bounds</a></span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>地图视图大小的描述</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="method_setZoom" class="method item">
+    <h3 class="name">setZoom</h3>
+    <code>
+    setZoom
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        zoom
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+    </code>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>设置缩放级别</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">zoom</code>
+                       <td> <span class="type">Number</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <ul>
+<li>设置缩放级别</li>
+</ul>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="method_zoom" class="method item">
+    <h3 class="name">zoom</h3>
+    <code>
+    zoom
+        <span class="paren">()</span>
+    </code>
+        <span class="returns-inline">
+            <span class="type">Number</span>
+        </span>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>获取缩放级别</p>
+</div>
+    </div>
+        <div class="returns">
+            <h4>Returns:</h4>
+            <div class="returns-description">
+                        [<span class="type">Number</span>]
+                    <p>当前缩放级别</p>
+            </div>
+        </div>
+</div>
+            </div>
+            <div id="event" class="tab-pane">
+                <h2 class="off-left">Events</h2>
+                    <div id="event_init" class="events item">
+    <h3 class="name"><code>init</code></h3>
+    <span class="type"></span>
+
+     <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>地图初始化事件，仅在地图对象被创建后触发一次</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">event</code>
+                       <td> <span class="type">Object</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>事件对象，event.type="init"; event.target = map;</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="event_move" class="events item">
+    <h3 class="name"><code>move</code></h3>
+    <span class="type"></span>
+
+     <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>地图移动事件</p>
+<ul>
+<li>无论以何种方式，使地图发生中心点改变时均会触发。</li>
+</ul>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">event</code>
+                       <td> <span class="type">Object</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>事件对象，event.type="move"; event.target = map;</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="event_movebegin" class="events item">
+    <h3 class="name"><code>movebegin</code></h3>
+    <span class="type"></span>
+
+     <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>地图移动开始事件</p>
+<ul>
+<li>当地图移动API调用条件下，移动开始时触发；<br></li>
+<li>当鼠标拖动地图移动条件下，鼠标左键按下后，第一次发生位置移动时触发；<br></li>
+<li>当移动设备上，触摸拖动地图时，手指按下屏幕后，第一次发生识别位置改变时触发。</li>
+</ul>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">event</code>
+                       <td> <span class="type">Object</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>事件对象，event.type="movebegin"; event.target = map;</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="event_moveend" class="events item">
+    <h3 class="name"><code>moveend</code></h3>
+    <span class="type"></span>
+
+     <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>地图移动结束事件。</p>
+<ul>
+<li>当地图移动API调用条件下，移动完成，地图中心点到达目标经纬度时触发；<br></li>
+<li>当鼠标拖动地图移动条件下，鼠标左键松开时触发；<br></li>
+<li>当移动设备上，触摸拖动地图时，手离开屏幕时触发。</li>
+</ul>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">event</code>
+                       <td> <span class="type">Object</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>事件对象，event.type="moveend"; event.target = map;</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="event_ready" class="events item">
+    <h3 class="name"><code>ready</code></h3>
+    <span class="type"></span>
+
+     <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>地图初始化就绪事件，仅在地图对象被创建后，地图开始正常的渲染显示时触发一次</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">event</code>
+                       <td> <span class="type">Object</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>事件对象，event.type="ready"; event.target = map;</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="event_resize" class="events item">
+    <h3 class="name"><code>resize</code></h3>
+    <span class="type"></span>
+
+     <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>地图尺寸改变事件</p>
+<ul>
+<li>浏览器窗口尺寸发生改变，地图尺寸逐之改变时触发；</li>
+<li>调用地图API改变其尺寸后触发；</li>
+</ul>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">event</code>
+                       <td> <span class="type">Object</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>事件对象，event.type="resize"; event.target = map;</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="event_tileready" class="events item">
+    <h3 class="name"><code>tileready</code></h3>
+    <span class="type"></span>
+
+     <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>地图数据就位事件</p>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">event</code>
+                       <td> <span class="type">Object</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>事件对象，event.type="tileready"; event.target = map;</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="event_zoom" class="events item">
+    <h3 class="name"><code>zoom</code></h3>
+    <span class="type"></span>
+
+     <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>地图缩放事件</p>
+<ul>
+<li>无论以何种方式，使地图发生缩放比例、级别改变时均会触发。</li>
+</ul>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">event</code>
+                       <td> <span class="type">Object</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>事件对象，event.type="zoom"; event.target = map;</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="event_zoombegin" class="events item">
+    <h3 class="name"><code>zoombegin</code></h3>
+    <span class="type"></span>
+
+     <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>地图缩放开始事件</p>
+<ul>
+<li>当地图缩放API调用条件下，缩放开始时触发；<br></li>
+<li>当点击地图上的缩放按钮条件下，鼠标点击（长按不予响应）后松开时触发；<br></li>
+<li>当鼠标滚轮滚动缩放动地图条件下，在上次滚动结束后，鼠标滚轮第一次发生滚动时触发；<br></li>
+<li>当移动设备或支持多点触摸的设备上，两个（及以上）手指触摸后，第一次手指聚拢或分开的动作被识别时触发。</li>
+</ul>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">event</code>
+                       <td> <span class="type">Object</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>事件对象，event.type="zoombegin"; event.target = map;</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+                    <div id="event_zoomend" class="events item">
+    <h3 class="name"><code>zoomend</code></h3>
+    <span class="type"></span>
+
+     <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>地图缩放结束事件</p>
+<ul>
+<li>当地图缩放API调用条件下，缩放级别、比例到达目标级别、比例，缩放动作结束时触发；<br></li>
+<li>当点击地图上的缩放按钮条件下，鼠标点击后，地图缩放动画结束时触发；<br></li>
+<li>当鼠标滚轮滚动缩放动地图条件下，在上次滚动发生后200毫秒内没有再发生滚动时触发；<br></li>
+<li>当移动设备或支持多点触摸的设备上，两个（及以上）手指触摸后，上次手指聚拢或分开的动作的被识后200毫秒内没有再发生类似的操作时触发。</li>
+</ul>
+</div>
+    </div>
+        <div class="params">
+            <h4>Parameters:</h4>
+            <table class="table table-bordered">
+            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
+                <tr class="param">
+                       <td> <code class="param-name">event</code>
+                       <td> <span class="type">Object</span>
+                       <td>
+                    </td>
+                    <td><div class="param-description">
+                        <p>事件对象，event.type="zoomend"; event.target = map;</p>
+                    </div>
+                </tr>
+            </table>
+        </div>
+</div>
+            </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<a id="gotoTop" class='well well-small' href='#'>
+    Top
+</a>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/doc.js"></script>
+</body>
+</html>

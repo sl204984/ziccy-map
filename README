@@ -1,0 +1,14 @@
+THIS FILE WILL INSTRUCT THE WEBMAP DEPLOYMENT AS FOLLOW.
+
+Before deploying the webmap source code, you should make them compressed and 
+hard to read. In the step, some tools will be used.
+1. node.js
+2. npm
+3. gulp
+You could configure the environment with gulp-install.sh running.
+If you got all of them, run 'gulp mjs' and 'gulp mcss' in webmap directory.
+Then you will get tkmap.min.js & tkmap.min.css at the 'minified' sub directory.
+Copy these two files; they will act as the tkmap sdk.
+ 
+
+

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<META CHARSET="UTF-8" />
+		<META NAME="viewport" CONTENT="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge"> 
+		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
+		<META HTTP-EQUIV="Expires" CONTENT="0"> 
+		<META NAME="description" CONTENT="tigerknows web map">
+		<META NAME="author" CONTENT="Cosim">
+		<TITLE>Twins map - example</TITLE>
+		<LINK rel="shortcut icon" type="image/x-icon" href="img/tkm_logo.ico">
+		
+		<style>
+.doubleScreenModel {
+    width: 50%!important;
+    display: block;
+}
+
+.fullscreen {
+    position: absolute!important;
+    /*width: 100%!important;*/
+    height: 100%!important;
+    z-index: 999999!important;
+    left: 0!important;
+    top: 0!important;
+    margin: 0!important;
+}
+
+.map-twin {
+	left: 50%!important;
+}
+		</style>
+		<!-- min module in doc - ->
+		<SCRIPT type="text/javascript" src="../webmap/vendor/jquery.min.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../webmap/tmap.min.js"></SCRIPT>
+		<LINK rel="stylesheet" type="text/css" href="../webmap/tmap.min.css" />
+		<!- - end min module -->		
+		
+		<SCRIPT type="text/javascript" src="../vendor/jquery.min.js"></SCRIPT>
+
+		
+		<!-- modules for dev -->
+		<SCRIPT type="text/javascript" src="../src/tkujs.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/daemon.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/layer.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/canvas.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/shiori.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/chirisugaku.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/tssh.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/anime.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/styler.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/chizu.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/mapapi.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/egaki.js"></SCRIPT> 
+		<SCRIPT type="text/javascript" src="../src/fukaku.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/clusterer.js"></SCRIPT> 
+		<!-- -->
+
+		<!-- min module - ->
+		<SCRIPT type="text/javascript" src="../webmap/tkmap.min.js"></SCRIPT>
+		<!- - end min module -->
+		
+		<!-- min module - ->
+		<SCRIPT type="text/javascript" src="../webmap/tkmap.min.js"></SCRIPT>
+		<!- - end min module -->
+
+		<!-- map.css - ->
+		<LINK rel="stylesheet" type="text/css" href="../src/tkmap.css" />
+		<!- - end map css-->
+
+		<!-- min css -->
+		<LINK rel="stylesheet" type="text/css" href="../tkmap.min.css" />
+		<!-- end min css -->
+
+		<SCRIPT type="text/javascript">
+$(function() {
+	var _map, _map2;
+
+	_map = new TMap.Map({
+		container: "map1",
+		rotateLock: true,
+		dynamicShow: true,
+	});
+
+	_map.setZoom(11);
+	_map.addEventListener(function(e) {
+		if (e.target) {
+			_map2.centerAndZoom(e.target.getCenter(), e.target.getZoom());
+		}
+	}, ["move", "zoom"]);
+
+
+	_map2 = new TMap.Map({
+		container: "map2",
+		rotateLock: true,
+		dynamicShow: true,
+	});
+
+	_map2.setZoom(11);
+
+	_map2.addEventListener(function(e){
+		if (e.target) {
+			_map.centerAndZoom(e.target.getCenter(), e.target.getZoom());
+		}
+	}, ["move", "zoom"]);
+
+	// 切换视图模式
+	_map2.addEventListener(function(e) {
+		_map2.view.basicLayer.setStyleView("satellite");
+		_map2.view.imageLayer.visible = true;
+	}, "ready");
+	// 
+
+
+
+	// _map.view.basicLayer.lonlatBox = _map.view.imageLayer.lonlatBox = [114.793643, 122.732077, 34.348206, 38.350043];
+	// var a=TMap.Point.toPoint(120,30);
+
+	// MarkerClusterer test
+	// var pins = [], pin = new TMap.Bubble([116.994, 36.6661]);
+	// pins.push(pin);
+	// pin = new TMap.Bubble([116.993, 36.6661]);
+	// pin.setStyle(2);
+	// pins.push(pin);
+	// pin = new TMap.Bubble([116.994, 36.66]);
+	// pin.setStyle(5);
+	// pins.push(pin);
+	// var mc = new TMap.MarkerClusterer(_map, {
+	//     markers: pins,
+	//     // maxZoom: 17,
+	// });
+
+
+	// Shape Overlay test
+	// var poly = new TMap.Polygon([[116.994, 36.6661],[116.994, 36.66],
+	// 	[116.9945, 36.66],[116.9945, 36.6658],[116.995, 36.6658],[116.995, 36.66],
+	// 	[116.9955, 36.66],[116.9955, 36.6658],[116.996, 36.6658],[116.996, 36.66],
+	// 	[116.9965, 36.66],[116.9965, 36.6658],[116.997, 36.6658],[116.997, 36.66],
+	// 	[116.9975, 36.66],[116.9975, 36.6658],[116.998, 36.6658],[116.998, 36.66],
+	// 	[116.9985, 36.66],[116.9985, 36.6658],[116.999, 36.6658],[116.999, 36.66],
+	// 	[117, 36.66],[117, 36.6661]]);
+	// _map.addOverlay(poly);
+	// poly = new TMap.Polyline([[116.993, 36.6663],[116.993, 36.658],
+	// 	[117.001, 36.658],[117.001, 36.6663]]);
+	// _map.addOverlay(poly);
+	// var cir = new TMap.Circle([116.994, 36.6661], 5000);
+	// cir.fillColor = "rgba(0,0,255,0.6)";
+	// _map.addOverlay(cir);
+});
+		</script>
+	</head>
+	<body>
+		<div id="map1" class="doubleScreenModel fullscreen"></div>
+		<div id="map2" class="doubleScreenModel fullscreen map-twin"></div>
+	</BODY>
+</HTML>

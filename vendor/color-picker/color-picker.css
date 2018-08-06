@@ -1,0 +1,33 @@
+
+div#wheel {position:absolute; visibility:visible; top:5px; left:5px;
+width: 553px; height: 257px; background: #ffff00;}
+
+div#demoa, div#demob, div#democ, div#demobox {
+   position:absolute; visibility:visible;
+   top:280px; width: 90px; height: 48px;} 
+div#demoa {left:5px; margin-right: 0px;}
+div#demob {left:95px; margin-left: 0px;  margin-right: 0px;}
+div#democ {left:185px; margin-left: 0px;}
+
+div#demobox {left:285px; margin-left: 0px;}
+
+div#notes {position:absolute; visibility:visible; top:650px;
+    left:50px; padding-top: 30px; font-size: 12px; width: 270px;}
+
+div#instructs {
+     position:absolute; visibility:visible; top:80px;
+     left:50px;  padding-bottom: 30px; width: 270px;}
+
+div#showhide {
+     position:absolute; visibility:visible; top:330px; left:620px;
+     padding-left: 35px; padding-right: 5px; width: 270px;}
+
+div#showhide span {text-decoration: underline;}
+
+div#watermark {position:absolute; visibility:visible; top:5px; 
+left:5px; width: 553px; white-space: nowrap;
+font-family: "Trebuchet MS", Skia, "Lucida Sans Unicode",
+sans-serif; font-size: 10px; color: #cecece;}
+
+button#btnOK {position:absolute; left:485px; top: 280px; width: 40px;}
+button#btnCancel {position:absolute; left:435px; top: 280px; width: 40px;}

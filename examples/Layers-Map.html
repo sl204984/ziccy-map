@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<META CHARSET="UTF-8" />
+		<META NAME="viewport" CONTENT="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge"> 
+		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
+		<META HTTP-EQUIV="Expires" CONTENT="0"> 
+		<META NAME="description" CONTENT="tigerknows web map">
+		<META NAME="author" CONTENT="Cosim">
+		<TITLE>Layers map - example</TITLE>
+		<LINK rel="shortcut icon" type="image/x-icon" href="img/tkm_logo.ico">
+
+		<!-- min module in doc - ->
+		<SCRIPT type="text/javascript" src="../webmap/vendor/jquery.min.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../webmap/tmap.min.js"></SCRIPT>
+		<LINK rel="stylesheet" type="text/css" href="../webmap/tmap.min.css" />
+		<!- - end min module -->		
+		
+		<SCRIPT type="text/javascript" src="../vendor/jquery.min.js"></SCRIPT>
+		
+		<!-- modules for dev -->
+		<SCRIPT type="text/javascript" src="../src/tkujs.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/daemon.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/layer.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/canvas.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/shiori.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/chirisugaku.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/tssh.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/anime.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/styler.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/chizu.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/mapapi.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/egaki.js"></SCRIPT> 
+		<SCRIPT type="text/javascript" src="../src/fukaku.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="../src/clusterer.js"></SCRIPT> 
+		<!-- -->
+
+		<!-- min module - ->
+		<SCRIPT type="text/javascript" src="../tkmap.min.js"></SCRIPT>
+		<!- - end min module -->
+		
+		<!-- map.css - ->
+		<LINK rel="stylesheet" type="text/css" href="../src/tkmap.css" />
+		<!- - end map css-->
+
+		<!-- min css -->
+		<LINK rel="stylesheet" type="text/css" href="../tkmap.min.css" />
+		<!-- end min css -->
+
+		<SCRIPT type="text/javascript">
+var _map;
+$(function() {
+	_map = new TMap.Map({
+		container: document.body,
+		layers: ["satellite", "horae", "tmc"],
+		rotateLock: true,
+		dynamicShow: true,
+
+		engineOption: {
+			
+			layerFactories:{
+				tmc: function(name) {
+						var lyr = new TMap.Layer.LayerWMS(name);
+		 				lyr.lonlatBox = [118.01526,123.171035,27.036882,31.186128],
+		 				lyr.urlPattern = TMap.domain+"/perseus/cors?url=" + "http://www.map.zj.cn:8899/geoserver/zjplatform/RTIC_POLYLINE/ows?LAYERS=RTIC_POLYLINE&VERSION=1.1.1&TRANSPARENT=TRUE&SERVICE=WMS&REQUEST=GetMap&STYLES=&FORMAT=image%2Fpng&SRS=EPSG%3A4326&BBOX=%{lon},%{lat},%{LON},%{LAT}&WIDTH=256&HEIGHT=256";
+		 				lyr.visible = false;
+		 				lyr.minZ = 8;
+				 		return lyr;
+				 	},
+				satellite: function(name) {
+						var lyr = new TMap.Layer.LayerWMTS(name);
+						lyr.lonlatBox = bbox;
+						lyr.urlPattern = TMap.domain + "/perseus/cors?url=" + "http://t%{svr}.tianditu.cn/img_c/wmts?service=wmts&style=default&format=tiles&request=GetTile&version=1.0.0&LAYER=img&tileMatrixSet=c&TileMatrix=%{z}&TileRow=%{y}&TileCol=%{x}";
+						lyr.visible = false;
+					},
+			},
+		},
+	});
+
+	_map.setZoom(11);
+	_map.getLayers()[2].visible = true;
+});
+		</script>
+	</head>
+	<body>
+	</BODY>
+</HTML>

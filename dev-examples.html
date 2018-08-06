@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<META charset="UTF-8" />
+		<META name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
+		<META HTTP-EQUIV="Expires" CONTENT="0"> 
+		<TITLE>老虎地图</TITLE>
+		<LINK rel="shortcut icon" type="image/x-icon" href="img/tkm_logo.ico">
+		<LINK rel="stylesheet" type="text/css" href="tkmap.css" />
+		<SCRIPT type="text/javascript" src="jquery.min.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="tkujs.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="eiso.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="shiori.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="chirisugaku.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="tssh.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="chizu.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="mapapi.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="egaki.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="heatmap.js"></SCRIPT>
+		<SCRIPT type="text/javascript">
+if (!window.applicationCache) {
+	alert("老虎地图需要支持HTML5的浏览器才能使用，请升级或更换你的浏览器。\n推荐使用Chrome 50, Firefox 28或其以上的版本。");
+}
+window.addEventListener('load', init, false);
+
+function init() {
+	var map = new TkMap.Map({
+		container:document.body,
+		// dynamicShow:true
+	});
+
+	// sunshined area curve
+	var M_RPD = Math.PI /180, M_DPR = 180/Math.PI;
+	var yu0 = 22.5*M_RPD, phi0=30*M_RPD, yu, phi;
+	var g_data = [];
+	for (var i = -360; i < 360; ++i) {
+		phi = i ;
+		yu = -Math.atan(Math.cos(phi * M_RPD -phi0)/Math.tan(yu0)) * M_DPR;
+		g_data.push([phi, yu]);
+	}
+	var t = new TkMap.Polygon(g_data);
+	map.addOverlay(t);
+
+
+	// polygon overlay
+	var p1 = new TkMap.Point(116.34,40), p2 = new TkMap.Point(117.32, 36.39);
+	var px = map.pointToOverlayPixel(p2);
+	var t = new TkMap.Polygon([[[116.94421820068362,36.70175463397322],[117.10065020542095,36.716566966316634],[117.12474384584675,36.57554229862569],[116.90750326674925,36.559901688681464]],
+     [[116.95663581559211,36.673251937638724],[117.04282785849409,36.67755373779329],[117.04817991378968,36.64205849974729],[116.9949282473558,36.646391653488934]]]);
+	map.addOverlay(t);
+
+	// heat map
+	var ol = new TkMap.HeatmapOverlay({element:null});
+	ol.initialize(map);
+	for (var i = 0; i < 1000; ++i) {
+		ol.addDataPoint(116.41 + Math.random()*0.5-0.25, 39.90 + Math.random()*0.5-0.25, Math.random()*400);	
+	}
+	map.view.heatmap = ol;
+
+	
+}
+		 </SCRIPT>
+	</HEAD>
+	<BODY>
+		<div id="debug" class="tkm-debug-info"></div>
+	</BODY>
+</HTML>
